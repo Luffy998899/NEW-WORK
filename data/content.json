@@ -1,0 +1,514 @@
+{
+  "site": {
+    "name": "GrowthBox",
+    "logoText": "GrowthBox",
+    "tagline": "A Creative Agency",
+    "primaryColor": "#FFC400",
+    "darkColor": "#111111",
+    "email": "info@thegrowthbox.in",
+    "phone": "+91 90000 00000",
+    "phoneAlt": "+91 88000 00000",
+    "addressChandigarh": "Plot 25, 2nd Floor, Industrial Area Phase 1, Chandigarh",
+    "addressRohtak": "Near Shri Krishna Wala, Model Town, Rohtak",
+    "social": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linkedin": "https://linkedin.com/",
+      "youtube": "https://youtube.com/",
+      "twitter": "https://twitter.com/"
+    },
+    "metaDescription": "GrowthBox is a creative digital marketing agency helping brands grow with SEO, social media marketing, Google Ads, branding and web development."
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "About Us",
+      "url": "/about-us"
+    },
+    {
+      "label": "Services",
+      "url": "/#services"
+    },
+    {
+      "label": "Blog",
+      "url": "/#"
+    }
+  ],
+  "ctaButtonLabel": "Contact Us",
+  "hero": {
+    "badge": "A CREATIVE AGENCY",
+    "headingLine1": "Building Brands.",
+    "headingLine2": "Boosting Business.",
+    "subheading": "Your partner in creative and digital marketing success. We craft strategies that turn attention into measurable growth.",
+    "primaryCta": {
+      "label": "Start a Project",
+      "url": "/contact-us"
+    },
+    "secondaryCta": {
+      "label": "Our Services",
+      "url": "/#services"
+    },
+    "image": "/images/hero.svg"
+  },
+  "trustedBy": {
+    "heading": "Trusted by Businesses of All Sizes",
+    "logos": [
+      {
+        "name": "Aurora",
+        "image": ""
+      },
+      {
+        "name": "Brana",
+        "image": ""
+      },
+      {
+        "name": "Nexon",
+        "image": ""
+      },
+      {
+        "name": "M&M",
+        "image": ""
+      },
+      {
+        "name": "Zylo",
+        "image": ""
+      },
+      {
+        "name": "Torbo",
+        "image": ""
+      },
+      {
+        "name": "Meridian",
+        "image": ""
+      }
+    ]
+  },
+  "services": {
+    "heading": "A Spectrum of Success-Driving Services",
+    "subheading": "End-to-end marketing solutions designed to grow your reach, revenue and reputation.",
+    "items": [
+      {
+        "icon": "megaphone",
+        "title": "Social Media Marketing",
+        "description": "Engaging campaigns that build community and drive conversions across every platform."
+      },
+      {
+        "icon": "search",
+        "title": "Search Engine Optimization",
+        "description": "Rank higher, get found and win qualified organic traffic that compounds over time."
+      },
+      {
+        "icon": "layers",
+        "title": "Strategic Branding",
+        "description": "Distinctive identities and messaging that make your brand impossible to ignore."
+      },
+      {
+        "icon": "target",
+        "title": "Google Ads",
+        "description": "High-intent PPC campaigns engineered for maximum ROI and lower cost per lead."
+      },
+      {
+        "icon": "users",
+        "title": "Influencer Marketing",
+        "description": "Authentic partnerships that put your brand in front of the right audiences."
+      },
+      {
+        "icon": "code",
+        "title": "Web Design & Development",
+        "description": "Fast, beautiful and conversion-focused websites built to perform."
+      }
+    ]
+  },
+  "marquee": [
+    "Facebook Marketing",
+    "Instagram Marketing",
+    "Google Ads & SEO",
+    "Influencer Marketing",
+    "Content Creation",
+    "Web Development"
+  ],
+  "whyChoose": {
+    "heading": "Why Choose GrowthBox as Your Internet Marketing Agency?",
+    "subheading": "At The Growth Box we are dedicated to turning your business ambitions into reality with strategies that deliver results and lasting partnerships.",
+    "points": [
+      {
+        "icon": "chart",
+        "title": "Strategic Business Approach",
+        "description": "Every decision is backed by data and aligned to your business goals for predictable growth."
+      },
+      {
+        "icon": "rocket",
+        "title": "Results-Driven Company",
+        "description": "We obsess over metrics that matter — leads, revenue and return on your ad spend."
+      },
+      {
+        "icon": "trend",
+        "title": "Holistic Growth",
+        "description": "A complete marketing ecosystem that works together to accelerate your momentum."
+      },
+      {
+        "icon": "star",
+        "title": "Expertise that Matters",
+        "description": "A seasoned team with 10+ years of experience across industries and channels."
+      },
+      {
+        "icon": "bulb",
+        "title": "Tailored Strategies",
+        "description": "No cookie-cutter plans — every campaign is customised to your brand and market."
+      },
+      {
+        "icon": "handshake",
+        "title": "Transformative Partnerships",
+        "description": "We work as an extension of your team, invested in your long-term success."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Elevate Your Success Today with Expert Guidance.",
+    "subheading": "Partner with a team that treats your growth like their own.",
+    "buttonLabel": "Get 7 Days free trial",
+    "buttonUrl": "/contact-us"
+  },
+  "socialSpark": {
+    "heading": "Ignite Your Brand's Social Spark",
+    "description": "Great social media marketing turns followers into fans and fans into customers. We build always-on strategies that keep your brand top of mind and drive real engagement.",
+    "image": "/images/social.svg",
+    "items": [
+      {
+        "title": "Tailored Social Media Strategy",
+        "content": "A custom roadmap built around your audience, goals and the platforms that matter most to your business."
+      },
+      {
+        "title": "Engaging Content Creation",
+        "content": "Scroll-stopping visuals, copy and video that reflect your brand and spark conversation."
+      },
+      {
+        "title": "Community Management",
+        "content": "We nurture your audience, respond to conversations and build loyal communities around your brand."
+      },
+      {
+        "title": "Data-Driven Insights",
+        "content": "Continuous reporting and optimisation so every post works harder than the last."
+      },
+      {
+        "title": "Paid Social Advertising",
+        "content": "Precision-targeted campaigns that amplify reach and deliver measurable conversions."
+      }
+    ]
+  },
+  "seoSection": {
+    "heading": "Unlocking Your Digital Potential with Effective SEO Services",
+    "description": "Search is where intent lives. Our SEO services help the right customers find you at the exact moment they are looking — with strategies that build durable, compounding organic growth.",
+    "cards": [
+      {
+        "title": "Social Media Marketing",
+        "description": "Amplify your message where your audience already spends their time and turn attention into action.",
+        "color": "yellow"
+      },
+      {
+        "title": "Navigating Local Waters",
+        "description": "Dominate local search and Google Maps so nearby customers choose you first.",
+        "color": "light"
+      },
+      {
+        "title": "On-Page Brilliance, Off-Page Excellence",
+        "description": "Technical precision on your site plus authority-building off it for rankings that last.",
+        "color": "light"
+      },
+      {
+        "title": "Global Strategies, Local Impact",
+        "description": "Scalable SEO that grows your footprint from your neighbourhood to the world.",
+        "color": "yellow"
+      }
+    ]
+  },
+  "googleAds": {
+    "heading": "Dominating Digital Landscapes with Google Ads",
+    "description": "Turn clicks into customers with expertly managed pay-per-click campaigns dedicated to your success.",
+    "image": "/images/ads.svg",
+    "items": [
+      {
+        "title": "Google Ads Management",
+        "content": "Full-funnel campaign strategy, build and management across Search, Display and Shopping."
+      },
+      {
+        "title": "Precision Targeting",
+        "content": "Reach high-intent audiences with laser-focused keywords, audiences and placements."
+      },
+      {
+        "title": "Transparent Reporting",
+        "content": "Clear dashboards and honest reporting so you always know where every rupee goes."
+      },
+      {
+        "title": "Conversion Excellence",
+        "content": "Landing page and funnel optimisation that turns paid traffic into paying customers."
+      }
+    ]
+  },
+  "architects": {
+    "heading": "We're Architects of Digital Experiences",
+    "subheading": "Discover how our website development services can transform your digital presence.",
+    "features": [
+      {
+        "title": "Tailored Solutions",
+        "description": "Custom-built websites and campaigns engineered around your unique business needs."
+      },
+      {
+        "title": "Responsive Designs",
+        "description": "Flawless experiences on every device, from desktop to mobile and everything between."
+      },
+      {
+        "title": "User-Centric Approach",
+        "description": "Intuitive journeys designed to convert visitors into loyal customers."
+      },
+      {
+        "title": "SEO Integration",
+        "description": "Search-ready foundations baked into everything we build from day one."
+      },
+      {
+        "title": "Cutting-Edge Technology",
+        "description": "Modern, fast and secure stacks that keep you ahead of the competition."
+      },
+      {
+        "title": "Performance Enhancement",
+        "description": "Speed, stability and continuous optimisation for measurable results."
+      }
+    ]
+  },
+  "expertise": {
+    "heading": "Our Diverse Expertise in Action",
+    "subheading": "Real work across the channels that move the needle.",
+    "cards": [
+      {
+        "icon": "facebook",
+        "title": "Facebook Advertising",
+        "description": "Campaigns that build awareness, engagement and sales at scale."
+      },
+      {
+        "icon": "instagram",
+        "title": "Instagram Marketing",
+        "description": "Visual storytelling that grows your following and your revenue."
+      },
+      {
+        "icon": "google",
+        "title": "Google Advertising",
+        "description": "High-intent search and display campaigns tuned for ROI."
+      },
+      {
+        "icon": "youtube",
+        "title": "YouTube Marketing",
+        "description": "Video strategies that capture attention and drive discovery."
+      },
+      {
+        "icon": "search",
+        "title": "Search Engine Optimization",
+        "description": "Sustainable organic growth that compounds month after month."
+      },
+      {
+        "icon": "users",
+        "title": "Influencer Marketing",
+        "description": "Creator partnerships that deliver trust and reach."
+      },
+      {
+        "icon": "linkedin",
+        "title": "LinkedIn Marketing",
+        "description": "B2B campaigns that reach decision-makers and generate leads."
+      }
+    ]
+  },
+  "funnel": {
+    "heading": "Reach! Engage! Sell! Repeat!",
+    "centerLabel": "GrowthBox",
+    "centerSub": "Digital Marketing Agency",
+    "footerLine": "Advertise and Retarget",
+    "items": [
+      "Brand Awareness",
+      "Consistent Business Growth",
+      "Traffic & Engagement",
+      "Retention"
+    ]
+  },
+  "finalCta": {
+    "heading": "Ready to Boost Your Online Presence?",
+    "subheading": "Let's transform your digital experience together with tailored digital marketing solutions.",
+    "badge": "Unlock More Customers",
+    "buttonLabel": "Get Started"
+  },
+  "footer": {
+    "about": "GrowthBox is a creative digital marketing agency helping brands grow with strategy, creativity and measurable results.",
+    "copyright": "© 2026 The Growth Box. All rights reserved.",
+    "quickLinks": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "About Us",
+        "url": "/about-us"
+      },
+      {
+        "label": "Contact Us",
+        "url": "/contact-us"
+      }
+    ],
+    "serviceLinks": [
+      {
+        "label": "Social Media Marketing",
+        "url": "/services/social-media-marketing"
+      },
+      {
+        "label": "Search Engine Optimization",
+        "url": "/services/seo"
+      },
+      {
+        "label": "Google Ads",
+        "url": "/services/google-ads"
+      },
+      {
+        "label": "Web Development",
+        "url": "/services/web-development"
+      }
+    ]
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "heading": "We Turn Ambition Into Growth",
+      "intro": "GrowthBox is a full-service creative and digital marketing agency. For over a decade we have helped businesses of every size build memorable brands and win measurable results online.",
+      "mission": "Our mission is simple: to be the growth partner our clients can't imagine working without. We combine strategy, creativity and data to build marketing that actually moves the needle.",
+      "stats": [
+        {
+          "value": "10+",
+          "label": "Years of Experience"
+        },
+        {
+          "value": "250+",
+          "label": "Projects Delivered"
+        },
+        {
+          "value": "120+",
+          "label": "Happy Clients"
+        },
+        {
+          "value": "15+",
+          "label": "Team Members"
+        }
+      ],
+      "values": [
+        {
+          "title": "Client First",
+          "description": "Your goals lead every decision we make."
+        },
+        {
+          "title": "Data Driven",
+          "description": "We measure what matters and optimise relentlessly."
+        },
+        {
+          "title": "Creative at Heart",
+          "description": "Ideas that stand out and strategies that stand up."
+        }
+      ]
+    },
+    "services": [
+      {
+        "slug": "social-media-marketing",
+        "title": "Social Media Marketing",
+        "heading": "Social Media Marketing that Builds Communities",
+        "intro": "We help brands show up, stand out and sell on the platforms their customers love. From strategy to content to paid social, we run the whole engine.",
+        "features": [
+          {
+            "title": "Content Strategy",
+            "description": "Always-on content planning tailored to your brand voice and audience."
+          },
+          {
+            "title": "Creative Production",
+            "description": "Scroll-stopping graphics, reels and copy produced in-house."
+          },
+          {
+            "title": "Community Management",
+            "description": "We engage, respond and grow loyal audiences around your brand."
+          },
+          {
+            "title": "Paid Social",
+            "description": "Targeted ad campaigns that turn reach into revenue."
+          }
+        ]
+      },
+      {
+        "slug": "seo",
+        "title": "Search Engine Optimization",
+        "heading": "SEO Services that Deliver Compounding Growth",
+        "intro": "Get found by the customers already searching for you. Our SEO services combine technical excellence, content and authority-building for durable rankings.",
+        "features": [
+          {
+            "title": "Technical SEO",
+            "description": "A fast, crawlable and error-free foundation for your site."
+          },
+          {
+            "title": "On-Page SEO",
+            "description": "Optimised content and structure that search engines love."
+          },
+          {
+            "title": "Local SEO",
+            "description": "Win the map pack and dominate searches in your area."
+          },
+          {
+            "title": "Link Building",
+            "description": "Authority-building outreach that lifts your entire domain."
+          }
+        ]
+      },
+      {
+        "slug": "google-ads",
+        "title": "Google Ads",
+        "heading": "Google Ads Management Built for ROI",
+        "intro": "Turn high-intent searches into customers with expertly managed PPC campaigns and transparent reporting.",
+        "features": [
+          {
+            "title": "Search Campaigns",
+            "description": "Capture demand from customers ready to buy."
+          },
+          {
+            "title": "Display & Shopping",
+            "description": "Expand reach and showcase products where it counts."
+          },
+          {
+            "title": "Conversion Optimisation",
+            "description": "Landing pages and funnels tuned to convert clicks."
+          },
+          {
+            "title": "Transparent Reporting",
+            "description": "Clear dashboards so you always know your ROI."
+          }
+        ]
+      },
+      {
+        "slug": "web-development",
+        "title": "Web Design & Development",
+        "heading": "Websites Engineered to Perform",
+        "intro": "Beautiful, fast and conversion-focused websites that turn visitors into customers and grow with your business.",
+        "features": [
+          {
+            "title": "Custom Design",
+            "description": "Unique, on-brand designs crafted around your goals."
+          },
+          {
+            "title": "Responsive Build",
+            "description": "Flawless performance on every screen size."
+          },
+          {
+            "title": "SEO Ready",
+            "description": "Search-optimised foundations from day one."
+          },
+          {
+            "title": "Ongoing Support",
+            "description": "Maintenance and optimisation to keep you ahead."
+          }
+        ]
+      }
+    ]
+  }
+}

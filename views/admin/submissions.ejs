@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Leads | <%= content.site.name %> Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="admin-wrap">
+  <%- include('sidebar') %>
+  <main class="main">
+    <div class="topbar">
+      <h1>Contact Leads</h1>
+      <div class="right"><span class="muted"><%= submissions.length %> total</span></div>
+    </div>
+
+    <% if (!submissions.length) { %>
+      <div class="card" style="max-width:600px">No leads yet. Submissions from the contact form and homepage lead form will appear here.</div>
+    <% } else { %>
+      <table class="table">
+        <thead><tr><th>Name</th><th>Contact</th><th>Message</th><th>Date</th><th></th></tr></thead>
+        <tbody>
+          <% submissions.forEach(function(s){ %>
+            <tr>
+              <td><strong><%= s.name %></strong></td>
+              <td><%= s.email %><% if (s.phone) { %><br><span class="muted"><%= s.phone %></span><% } %></td>
+              <td style="max-width:340px"><%= s.message %></td>
+              <td class="muted"><%= new Date(s.date).toLocaleString() %></td>
+              <td>
+                <form method="POST" action="/admin/submissions/delete/<%= s.id %>" onsubmit="return confirm('Delete this lead?')">
+                  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } %>
+  </main>
+</div>
+</body>
+</html>

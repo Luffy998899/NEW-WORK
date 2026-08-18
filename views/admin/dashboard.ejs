@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | <%= content.site.name %> Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="admin-wrap">
+  <%- include('sidebar') %>
+  <main class="main">
+    <div class="topbar">
+      <h1>Dashboard</h1>
+      <div class="right">
+        <span class="muted">Signed in as <strong><%= username %></strong></span>
+        <a class="btn btn-ghost btn-sm" href="/" target="_blank">View Site ↗</a>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="n"><%= sections.length %></div><div class="l">Editable Sections</div></div>
+      <div class="stat-box"><div class="n"><%= submissionCount %></div><div class="l">Contact Leads</div></div>
+      <div class="stat-box"><div class="n"><%= content.pages.services.length %></div><div class="l">Service Pages</div></div>
+    </div>
+
+    <h2 style="font-size:18px;margin:6px 0 16px;font-weight:700">Manage Website Content</h2>
+    <div class="cards">
+      <% sections.forEach(function(s){ %>
+        <a class="card" href="/admin/edit/<%= s.key %>">
+          <h3><%= s.label %></h3>
+          <p><%= s.desc %></p>
+          <span class="tag">Edit →</span>
+        </a>
+      <% }); %>
+    </div>
+  </main>
+</div>
+</body>
+</html>

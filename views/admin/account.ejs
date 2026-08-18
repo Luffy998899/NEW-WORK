@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account | <%= content.site.name %> Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="admin-wrap">
+  <%- include('sidebar') %>
+  <main class="main">
+    <div class="topbar"><h1>Account Settings</h1></div>
+    <% if (message) { %><div class="ok-msg" style="max-width:520px"><%= message %></div><% } %>
+    <% if (error) { %><div class="err-msg" style="max-width:520px"><%= error %></div><% } %>
+    <div class="editor" style="max-width:520px">
+      <form method="POST" action="/admin/account">
+        <div class="form-group">
+          <label>Current Password <span style="color:#b91c1c">*</span></label>
+          <input type="password" name="currentPassword" required placeholder="Enter current password">
+        </div>
+        <hr style="border:none;border-top:1px solid var(--border);margin:20px 0">
+        <div class="form-group">
+          <label>New Username</label>
+          <input type="text" name="newUsername" value="<%= username %>">
+        </div>
+        <div class="form-group">
+          <label>New Password</label>
+          <input type="password" name="newPassword" placeholder="Leave blank to keep current">
+        </div>
+        <div class="form-group">
+          <label>Confirm New Password</label>
+          <input type="password" name="confirmPassword" placeholder="Repeat new password">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Account</button>
+      </form>
+    </div>
+  </main>
+</div>
+</body>
+</html>

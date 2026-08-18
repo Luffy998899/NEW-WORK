@@ -1,0 +1,14 @@
+<aside class="sidebar">
+  <div class="brand"><%= content.site.name.replace(/Box$/,'') %><span>Box</span> Admin</div>
+  <a href="/admin" class="<%= active === 'dashboard' ? 'active' : '' %>">■ Dashboard</a>
+  <a href="/admin/submissions" class="<%= active === 'submissions' ? 'active' : '' %>">✉ Contact Leads</a>
+  <a href="/" target="_blank">↗ View Website</a>
+  <div class="sep"></div>
+  <div class="label">Content Sections</div>
+  <% sections.forEach(function(s){ %>
+    <a href="/admin/edit/<%= s.key %>" class="<%= (typeof activeKey!=='undefined' && activeKey===s.key) ? 'active' : '' %>"><%= s.label %></a>
+  <% }); %>
+  <div class="sep"></div>
+  <a href="/admin/account" class="<%= active === 'account' ? 'active' : '' %>">⚙ Account</a>
+  <a href="/admin/logout">⎋ Logout</a>
+</aside>

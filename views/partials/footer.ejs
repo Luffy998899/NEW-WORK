@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo"><%= content.site.name.replace(/Box$/,'') %><span class="dot">Box</span></div>
+        <p><%= content.footer.about %></p>
+        <div class="social-row">
+          <% Object.keys(content.site.social).forEach(function(net){ if(content.site.social[net]){ %>
+            <a href="<%= content.site.social[net] %>" target="_blank" rel="noopener" aria-label="<%= net %>"><%- include('icon', { name: net }) %></a>
+          <% }}); %>
+        </div>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <% content.footer.quickLinks.forEach(function(l){ %><li><a href="<%= l.url %>"><%= l.label %></a></li><% }); %>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <% content.footer.serviceLinks.forEach(function(l){ %><li><a href="<%= l.url %>"><%= l.label %></a></li><% }); %>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in Touch</h5>
+        <ul class="footer-contact">
+          <li><%- include('icon', { name: 'map' }) %><span><%= content.site.addressChandigarh %></span></li>
+          <li><%- include('icon', { name: 'phone' }) %><span><%= content.site.phone %></span></li>
+          <li><%- include('icon', { name: 'mail' }) %><span><%= content.site.email %></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><%= content.footer.copyright %></div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
