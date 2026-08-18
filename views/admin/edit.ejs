@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit <%= section.label %> | <%= content.site.name %> Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="admin-wrap">
+  <%- include('sidebar') %>
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="muted"><a href="/admin" style="color:inherit;text-decoration:none">Dashboard</a> / Edit</div>
+        <h1><%= section.label %></h1>
+      </div>
+      <div class="right">
+        <a class="btn btn-ghost btn-sm" href="/" target="_blank">Preview Site ↗</a>
+      </div>
+    </div>
+
+    <% if (saved) { %><div class="ok-msg" style="max-width:900px">✓ Changes saved successfully.</div><% } %>
+    <p class="muted" style="margin-bottom:18px;max-width:900px"><%= section.desc %>. Edit the fields below and click Save. Use “+ Add” to add list items and the ✕ button to remove them.</p>
+
+    <form method="POST" action="/admin/edit/<%= section.key %>" id="editForm">
+      <div class="editor">
+        <div id="formRoot"></div>
+      </div>
+      <input type="hidden" name="payload" id="payload">
+      <div class="save-bar">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a href="/admin" class="btn btn-ghost">Cancel</a>
+      </div>
+    </form>
+  </main>
+</div>
+
+<script>window.__SECTION_DATA__ = <%- JSON.stringify(data) %>;</script>
+<script src="/js/form-builder.js"></script>
+</body>
+</html>

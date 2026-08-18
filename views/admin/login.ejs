@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | <%= content.site.name %></title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="login-page">
+  <div class="login-box">
+    <div class="brand"><%= content.site.name.replace(/Box$/,'') %><span>Box</span></div>
+    <div class="sub">Admin Panel — sign in to manage your website</div>
+    <% if (error) { %><div class="err-msg"><%= error %></div><% } %>
+    <form method="POST" action="/admin/login">
+      <input type="text" name="username" placeholder="Username" required autofocus>
+      <input type="password" name="password" placeholder="Password" required>
+      <button class="btn btn-primary" type="submit">Sign In</button>
+    </form>
+    <div class="hint">Default: admin / admin123 — change it after first login</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">
+      <% if (content.site.logoImage) { %>
+        <img src="<%= content.site.logoImage %>" alt="<%= content.site.name %>">
+      <% } else { %>
+        <span><%= content.site.name.replace(/Box$/,'') %><span class="dot">Box</span></span>
+      <% } %>
+    </a>
+    <nav class="nav" id="mainNav">
+      <% content.nav.forEach(function(item){ %>
+        <a class="nav-link <%= currentPath === item.url ? 'active' : '' %>" href="<%= item.url %>"><%= item.label %></a>
+      <% }); %>
+      <a class="btn btn-primary" href="/contact-us" style="display:none" data-mobile-cta><%= content.ctaButtonLabel %></a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="/contact-us"><%= content.ctaButtonLabel %></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>

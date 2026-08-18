@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><% pageTitle = content.pages.about.title; %><%- include('partials/head') %></head>
+<body>
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumb">Home / About Us</div>
+    <h1><%= content.pages.about.heading %></h1>
+    <p><%= content.pages.about.intro %></p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="container split">
+    <div>
+      <div class="hero-badge"><%= content.site.tagline %></div>
+      <h2 style="font-size:32px;font-weight:800;margin:16px 0"><%= content.site.name %></h2>
+      <p style="color:var(--gray);font-size:17px"><%= content.pages.about.mission %></p>
+    </div>
+    <div class="stats-grid">
+      <% content.pages.about.stats.forEach(function(s){ %>
+        <div class="stat"><div class="value"><%= s.value %></div><div class="label"><%= s.label %></div></div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="pad light-bg">
+  <div class="container">
+    <div class="section-head"><h2>Our Values</h2><p>The principles that guide everything we do.</p></div>
+    <div class="grid-3">
+      <% content.pages.about.values.forEach(function(v){ %>
+        <div class="why-card">
+          <div class="ic"><%- include('partials/icon', { name: 'star' }) %></div>
+          <h4><%= v.title %></h4>
+          <p><%= v.description %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2><%= content.ctaBanner.heading %></h2>
+      <a class="btn btn-dark" href="/contact-us"><%= content.ctaButtonLabel %></a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

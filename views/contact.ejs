@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><% pageTitle = 'Contact Us'; %><%- include('partials/head') %></head>
+<body>
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumb">Home / Contact Us</div>
+    <h1>Let's Build Something Great</h1>
+    <p>Tell us about your goals and we'll show you how we can help your brand grow.</p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="container contact-grid">
+    <div>
+      <h2 style="font-size:28px;font-weight:800;margin-bottom:18px">Send us a message</h2>
+      <% if (sent) { %><div class="alert ok">Thank you! Your message has been received. We'll get back to you shortly.</div><% } %>
+      <% if (error) { %><div class="alert err"><%= error %></div><% } %>
+      <form class="contact-form" method="POST" action="/contact-us">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <textarea name="message" placeholder="How can we help you?"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <h2 style="font-size:24px;font-weight:800;margin-bottom:24px">Get in Touch</h2>
+      <div class="ci">
+        <div class="ic"><%- include('partials/icon', { name: 'map' }) %></div>
+        <div><h5>Chandigarh Office</h5><p><%= content.site.addressChandigarh %></p></div>
+      </div>
+      <div class="ci">
+        <div class="ic"><%- include('partials/icon', { name: 'map' }) %></div>
+        <div><h5>Rohtak Office</h5><p><%= content.site.addressRohtak %></p></div>
+      </div>
+      <div class="ci">
+        <div class="ic"><%- include('partials/icon', { name: 'phone' }) %></div>
+        <div><h5>Phone</h5><p><%= content.site.phone %><% if(content.site.phoneAlt){ %><br><%= content.site.phoneAlt %><% } %></p></div>
+      </div>
+      <div class="ci">
+        <div class="ic"><%- include('partials/icon', { name: 'mail' }) %></div>
+        <div><h5>Email</h5><p><%= content.site.email %></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

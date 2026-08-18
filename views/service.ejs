@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><% pageTitle = service.title; %><%- include('partials/head') %></head>
+<body>
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumb">Home / Services / <%= service.title %></div>
+    <h1><%= service.heading %></h1>
+    <p><%= service.intro %></p>
+    <div style="margin-top:22px"><a class="btn btn-primary" href="/contact-us"><%= content.ctaButtonLabel %></a></div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="container">
+    <div class="section-head"><h2>What We Offer</h2></div>
+    <div class="grid-2">
+      <% service.features.forEach(function(f){ %>
+        <div class="service-card">
+          <div class="ic"><%- include('partials/icon', { name: 'check' }) %></div>
+          <h4><%= f.title %></h4>
+          <p><%= f.description %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<div class="marquee dark">
+  <div class="marquee-track">
+    <% for (var m=0;m<2;m++){ content.marquee.forEach(function(item){ %><span class="marquee-item"><%= item %></span><% }); } %>
+  </div>
+</div>
+
+<section class="pad">
+  <div class="container">
+    <div class="section-head"><h2>Explore Our Other Services</h2></div>
+    <div class="grid-3">
+      <% content.pages.services.forEach(function(s){ if(s.slug!==service.slug){ %>
+        <a class="service-card" href="/services/<%= s.slug %>" style="display:block">
+          <h4><%= s.title %></h4>
+          <p><%= s.intro.slice(0,90) %>…</p>
+        </a>
+      <% }}); %>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="container">
+    <div class="final-cta">
+      <div>
+        <h2><%= content.finalCta.heading %></h2>
+        <p><%= content.finalCta.subheading %></p>
+      </div>
+      <form class="lead-form" method="POST" action="/lead">
+        <span class="badge"><%= content.finalCta.badge %></span>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <button type="submit" class="btn btn-primary"><%= content.finalCta.buttonLabel %></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

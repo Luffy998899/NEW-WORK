@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body>
+<%- include('partials/header') %>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="hero-badge"><%= content.hero.badge %></span>
+      <h1><%= content.hero.headingLine1 %><br><span class="underline"><%= content.hero.headingLine2 %></span></h1>
+      <p><%= content.hero.subheading %></p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="<%= content.hero.primaryCta.url %>"><%= content.hero.primaryCta.label %></a>
+        <a class="btn btn-outline" href="<%= content.hero.secondaryCta.url %>"><%= content.hero.secondaryCta.label %></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="blob"></div>
+      <img src="<%= content.hero.image %>" alt="GrowthBox creative agency">
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BY -->
+<section class="trusted pad-sm container">
+  <h3><%= content.trustedBy.heading %></h3>
+  <div class="logo-strip">
+    <% content.trustedBy.logos.forEach(function(l){ %>
+      <% if (l.image) { %><img src="<%= l.image %>" alt="<%= l.name %>"><% } else { %><span class="logo-item"><%= l.name %></span><% } %>
+    <% }); %>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2><%= content.services.heading %></h2>
+      <p><%= content.services.subheading %></p>
+    </div>
+    <div class="grid-3">
+      <% content.services.items.forEach(function(s){ %>
+        <div class="service-card">
+          <div class="ic"><%- include('partials/icon', { name: s.icon }) %></div>
+          <h4><%= s.title %></h4>
+          <p><%= s.description %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee dark">
+  <div class="marquee-track">
+    <% for (var m=0;m<2;m++){ content.marquee.forEach(function(item){ %><span class="marquee-item"><%= item %></span><% }); } %>
+  </div>
+</div>
+
+<!-- WHY CHOOSE -->
+<section class="pad light-bg">
+  <div class="container">
+    <div class="section-head">
+      <h2><%= content.whyChoose.heading %></h2>
+      <p><%= content.whyChoose.subheading %></p>
+    </div>
+    <div class="grid-3">
+      <% content.whyChoose.points.forEach(function(p){ %>
+        <div class="why-card">
+          <div class="ic"><%- include('partials/icon', { name: p.icon }) %></div>
+          <h4><%= p.title %></h4>
+          <p><%= p.description %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="pad-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2><%= content.ctaBanner.heading %></h2>
+      <p><%= content.ctaBanner.subheading %></p>
+      <a class="btn btn-dark" href="<%= content.ctaBanner.buttonUrl %>"><%= content.ctaBanner.buttonLabel %></a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL SPARK (dark accordion) -->
+<section class="pad dark-bg">
+  <div class="container">
+    <div class="split">
+      <div class="media"><img src="<%= content.socialSpark.image %>" alt="Social media marketing"></div>
+      <div>
+        <h2><%= content.socialSpark.heading %></h2>
+        <p><%= content.socialSpark.description %></p>
+        <div class="accordion">
+          <% content.socialSpark.items.forEach(function(it){ %>
+            <div class="acc-item">
+              <div class="acc-head"><%= it.title %><span class="plus">+</span></div>
+              <div class="acc-body"><p><%= it.content %></p></div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO SECTION -->
+<section class="pad">
+  <div class="container">
+    <div class="section-head">
+      <h2><%= content.seoSection.heading %></h2>
+      <p><%= content.seoSection.description %></p>
+    </div>
+    <div class="seo-grid">
+      <% content.seoSection.cards.forEach(function(c){ %>
+        <div class="seo-card <%= c.color %>">
+          <h4><%= c.title %></h4>
+          <p><%= c.description %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE reverse yellow -->
+<div class="marquee yellow reverse">
+  <div class="marquee-track">
+    <% for (var m2=0;m2<2;m2++){ content.marquee.forEach(function(item){ %><span class="marquee-item"><%= item %></span><% }); } %>
+  </div>
+</div>
+
+<!-- GOOGLE ADS (dark accordion) -->
+<section class="pad dark-bg">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2><%= content.googleAds.heading %></h2>
+        <p><%= content.googleAds.description %></p>
+        <div class="accordion">
+          <% content.googleAds.items.forEach(function(it){ %>
+            <div class="acc-item">
+              <div class="acc-head"><%= it.title %><span class="plus">+</span></div>
+              <div class="acc-body"><p><%= it.content %></p></div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="media"><img src="<%= content.googleAds.image %>" alt="Google Ads management"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTS / WEB DEV -->
+<section class="pad">
+  <div class="container">
+    <div class="section-head">
+      <h2><%= content.architects.heading %></h2>
+      <p><%= content.architects.subheading %></p>
+    </div>
+    <% content.architects.features.forEach(function(f, i){ %>
+      <div class="feature-row">
+        <h4><%= f.title %></h4>
+        <p><%= f.description %></p>
+        <div class="num"><%= (i+1<10?'0':'')+(i+1) %></div>
+      </div>
+    <% }); %>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="pad light-bg">
+  <div class="container">
+    <div class="section-head">
+      <h2><%= content.expertise.heading %></h2>
+      <p><%= content.expertise.subheading %></p>
+    </div>
+    <div class="grid-3">
+      <% content.expertise.cards.forEach(function(c){ %>
+        <div class="exp-card">
+          <div class="ic"><%- include('partials/icon', { name: c.icon }) %></div>
+          <h4><%= c.title %></h4>
+          <p><%= c.description %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section class="pad">
+  <div class="container funnel-wrap">
+    <div class="section-head"><h2><%= content.funnel.heading %></h2></div>
+    <div class="funnel-circle">
+      <span class="big"><%= content.funnel.centerLabel %></span>
+      <span class="small"><%= content.funnel.centerSub %></span>
+    </div>
+    <div class="funnel-items">
+      <% content.funnel.items.forEach(function(fi){ %><div class="fi"><%= fi %></div><% }); %>
+    </div>
+    <p style="margin-top:22px;font-weight:600;color:var(--gray)"><%= content.funnel.footerLine %></p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="pad-sm" id="final-cta">
+  <div class="container">
+    <div class="final-cta">
+      <div>
+        <h2><%= content.finalCta.heading %></h2>
+        <p><%= content.finalCta.subheading %></p>
+      </div>
+      <form class="lead-form" method="POST" action="/lead">
+        <span class="badge"><%= content.finalCta.badge %></span>
+        <% if (typeof query !== 'undefined' && query.lead === '1') { %><div class="alert ok">Thanks! We'll be in touch soon.</div><% } %>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <button type="submit" class="btn btn-primary"><%= content.finalCta.buttonLabel %></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

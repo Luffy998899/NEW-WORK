@@ -1,0 +1,25 @@
+{
+  "name": "growthbox-clone",
+  "version": "1.0.0",
+  "description": "GrowthBox - Creative & Digital Marketing Agency website with editable admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "digital-marketing",
+    "agency",
+    "cms",
+    "admin-panel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "multer": "^2.2.0"
+  }
+}
