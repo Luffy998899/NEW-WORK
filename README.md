@@ -81,41 +81,63 @@ public/
   images/              Brand SVG graphics
 ```
 
+## Storage
+
+Content, contact submissions and the admin account are read/written through
+`store.js`, which has two backends chosen automatically:
+
+- **Database (Postgres)** — used when a connection string env var is present
+  (`DATABASE_URL` or `POSTGRES_URL`). Everything is stored in a single
+  `gb_store(key, value jsonb)` table, seeded on first run from the bundled
+  `data/content.json`. This is what makes admin edits **persist on serverless
+  hosts like Vercel**.
+- **Flat files** — used when no database is configured (local development, or a
+  host with a writable disk). Writes go to `./data`, or `/tmp` on a read-only
+  serverless filesystem (ephemeral).
+
 ## Deployment
 
-### Vercel (serverless)
-The repo is Vercel-ready: `vercel.json` routes all requests to the Express app
-via `api/index.js`. Just import the repo in Vercel and deploy — no build config
-needed.
+### Vercel + a free Postgres database (recommended — makes admin edits stick)
+Vercel's filesystem is ephemeral, so admin edits only persist when a database is
+attached. Setup takes ~2 minutes:
 
-**Important — content persistence on Vercel:** Vercel's filesystem is
-**read-only** except `/tmp`, which is per-instance and wiped on every redeploy.
-The public site always renders the content committed in `data/content.json`.
-Admin edits are written to `/tmp`, so they work **within a running instance but
-are not permanent** — a redeploy or a new serverless instance resets them.
+1. Import the repo in Vercel and deploy (it's Vercel-ready via `vercel.json` +
+   `api/index.js`).
+2. In your Vercel project → **Storage** → **Create Database** → choose
+   **Postgres** (Neon). Click **Connect** to link it to the project. Vercel
+   automatically adds the `POSTGRES_URL` / `DATABASE_URL` environment variables.
+3. Also add these environment variables (Project → Settings → Environment
+   Variables):
+   - `ADMIN_PASSWORD` — your admin password (so it isn't the default)
+   - `SESSION_SECRET` — any long random string
+4. **Redeploy.** Done — the app creates its table, seeds it from
+   `data/content.json`, and every admin edit now persists across visits and
+   redeploys.
 
-To make admin edits permanent you have two options:
-1. **Edit locally** and commit `data/content.json` (the site reads it as the
-   source of truth), or
-2. **Deploy to a host with a persistent disk** — Render, Railway, Fly.io, or a
-   VPS — where `data/content.json` stays writable and edits persist across
-   restarts (see below).
+> Any Postgres works (Neon, Supabase, Railway, etc.) — just set `DATABASE_URL`
+> to its connection string.
 
-Optional Vercel environment variables: `ADMIN_USER`, `ADMIN_PASSWORD`,
-`SESSION_SECRET` (set these so the admin login isn't the public default).
+**Note on image uploads:** uploaded image *files* still go to `/tmp` on Vercel
+and are not permanent. Text/content edits (the bulk of the admin panel) persist
+in the database. For permanent image uploads, host the images elsewhere and
+paste their URLs into the image fields, or deploy to a host with a disk (below).
 
-### Render / Railway / VPS (persistent — recommended for the admin panel)
-Any host that runs `node server.js` on a normal (writable) filesystem gives you
-a fully persistent admin panel:
+### Render / Railway / VPS (persistent disk, no database needed)
+Any host that runs `node server.js` on a writable filesystem works with the
+flat-file backend:
 - Build command: `npm install`
 - Start command: `npm start`
-- Set `ADMIN_PASSWORD` and `SESSION_SECRET` env vars.
+- Env vars: `ADMIN_PASSWORD`, `SESSION_SECRET`
+(You can still point it at a database by setting `DATABASE_URL`.)
 
-Here `data/content.json`, `data/submissions.json` and `public/uploads/` are all
-writable, so every admin edit persists.
+### Environment variables (summary)
+| Variable | Purpose |
+|----------|---------|
+| `DATABASE_URL` / `POSTGRES_URL` | Postgres connection string → enables the database backend |
+| `ADMIN_USER` | Admin username (default `admin`) |
+| `ADMIN_PASSWORD` | Admin password (default `admin123` — change it!) |
+| `SESSION_SECRET` | Secret used to sign the login cookie |
 
 ## Notes
 - The design and layout replicate the original site; body copy is original
   placeholder text you can rewrite from the admin panel.
-- No external database is required — everything runs on flat JSON files, so it
-  deploys anywhere Node runs.
