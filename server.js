@@ -86,6 +86,18 @@ function requireAuth(req, res, next) {
   return res.redirect('/admin/login');
 }
 
+// ---------- Maintenance mode ----------
+// When enabled in Site Settings, normal visitors get a "Under Maintenance"
+// page (404). Logged-in admins bypass it so they can preview the live site.
+// /admin, /uploads and static assets are always allowed through.
+app.use((req, res, next) => {
+  const site = (res.locals.content && res.locals.content.site) || {};
+  if (!site.maintenance) return next();
+  if (req.session && req.session.authed) return next(); // admin previews the real site
+  if (req.path.startsWith('/admin') || req.path.startsWith('/uploads')) return next();
+  return res.status(404).render('maintenance', { content: res.locals.content });
+});
+
 // ================= PUBLIC ROUTES =================
 app.get('/', (req, res) => {
   res.render('index', { content: res.locals.content, query: req.query });

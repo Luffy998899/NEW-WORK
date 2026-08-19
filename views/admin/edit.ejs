@@ -21,7 +21,12 @@
     </div>
 
     <% if (saved) { %><div class="ok-msg" style="max-width:900px">✓ Changes saved successfully.</div><% } %>
-    <p class="muted" style="margin-bottom:18px;max-width:900px"><%= section.desc %>. Edit the fields below and click Save. Use “+ Add” to add list items and the ✕ button to remove them.</p>
+    <p class="muted" style="margin-bottom:14px;max-width:900px"><%= section.desc %>. Click a row to open it, edit the fields, then click <strong>Save Changes</strong> at the bottom.</p>
+
+    <div class="editor-toolbar">
+      <button type="button" class="btn btn-ghost btn-sm" onclick="window.__gbExpandAll(true)">⊕ Expand all</button>
+      <button type="button" class="btn btn-ghost btn-sm" onclick="window.__gbExpandAll(false)">⊖ Collapse all</button>
+    </div>
 
     <form method="POST" action="/admin/edit/<%= section.key %>" id="editForm">
       <div class="editor">

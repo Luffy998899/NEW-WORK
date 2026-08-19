@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><% pageTitle = 'Under Maintenance'; %><%- include('partials/head') %></head>
+<body>
+<section class="page-hero" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 0">
+  <div class="container" style="max-width:640px">
+    <div class="logo" style="justify-content:center;margin-bottom:28px">
+      <span class="logo-txt"><%= content.site.name.replace(/Box$/,'') %><span class="dot">Box</span></span>
+    </div>
+    <div style="font-size:64px;margin-bottom:10px">🛠️</div>
+    <h1 style="margin-bottom:14px"><%= content.site.maintenanceHeading || 'We’ll be right back' %></h1>
+    <p style="font-size:18px"><%= content.site.maintenanceMessage || 'Our website is currently down for maintenance. Please check back shortly.' %></p>
+    <% if (content.site.phone || content.site.email) { %>
+      <p style="margin-top:22px;color:var(--gray)">
+        Need us urgently?
+        <% if (content.site.email) { %><a href="mailto:<%= content.site.email %>" style="color:var(--yellow-dark);font-weight:600"><%= content.site.email %></a><% } %>
+      </p>
+    <% } %>
+  </div>
+</section>
+</body>
+</html>
