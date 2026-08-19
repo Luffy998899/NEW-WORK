@@ -8,6 +8,16 @@
     });
   }
 
+  // Mega menu toggle (mobile): tap the Services caret to expand
+  document.querySelectorAll('.has-mega .mega-toggle').forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        t.closest('.has-mega').classList.toggle('open');
+      }
+    });
+  });
+
   // Accordions
   document.querySelectorAll('.acc-head').forEach(function (head) {
     head.addEventListener('click', function () {

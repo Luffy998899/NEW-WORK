@@ -6,8 +6,8 @@
     "primaryColor": "#FFC400",
     "darkColor": "#111111",
     "email": "info@thegrowthbox.in",
-    "phone": "+91 90000 00000",
-    "phoneAlt": "+91 88000 00000",
+    "phone": "+91 9729-774433",
+    "phoneAlt": "+91 83988-56144",
     "addressChandigarh": "Plot 25, 2nd Floor, Industrial Area Phase 1, Chandigarh",
     "addressRohtak": "Near Shri Krishna Wala, Model Town, Rohtak",
     "social": {
@@ -25,16 +25,25 @@
       "url": "/"
     },
     {
+      "label": "Services",
+      "url": "/#services",
+      "mega": true
+    },
+    {
       "label": "About Us",
       "url": "/about-us"
     },
     {
-      "label": "Services",
-      "url": "/#services"
+      "label": "Blog",
+      "url": "/blog"
     },
     {
-      "label": "Blog",
-      "url": "/#"
+      "label": "Career",
+      "url": "/career"
+    },
+    {
+      "label": "Contact Us",
+      "url": "/contact-us"
     }
   ],
   "ctaButtonLabel": "Contact Us",
@@ -350,6 +359,14 @@
         "url": "/about-us"
       },
       {
+        "label": "Blog",
+        "url": "/blog"
+      },
+      {
+        "label": "Career",
+        "url": "/career"
+      },
+      {
         "label": "Contact Us",
         "url": "/contact-us"
       }
@@ -364,14 +381,43 @@
         "url": "/services/seo"
       },
       {
-        "label": "Google Ads",
-        "url": "/services/google-ads"
+        "label": "Customize Ecommerce Portal",
+        "url": "/services/ecommerce-portal"
       },
       {
         "label": "Web Development",
         "url": "/services/web-development"
       }
-    ]
+    ],
+    "process": {
+      "heading": "How We Work Together",
+      "steps": [
+        {
+          "icon": "coffee",
+          "label": "Discuss"
+        },
+        {
+          "icon": "bulb",
+          "label": "Plan"
+        },
+        {
+          "icon": "code",
+          "label": "Design & Dev"
+        },
+        {
+          "icon": "check",
+          "label": "Testing"
+        },
+        {
+          "icon": "rocket",
+          "label": "Launch"
+        },
+        {
+          "icon": "megaphone",
+          "label": "Promote"
+        }
+      ]
+    }
   },
   "pages": {
     "about": {
@@ -416,99 +462,1929 @@
       {
         "slug": "social-media-marketing",
         "title": "Social Media Marketing",
-        "heading": "Social Media Marketing that Builds Communities",
-        "intro": "We help brands show up, stand out and sell on the platforms their customers love. From strategy to content to paid social, we run the whole engine.",
-        "features": [
-          {
-            "title": "Content Strategy",
-            "description": "Always-on content planning tailored to your brand voice and audience."
-          },
-          {
-            "title": "Creative Production",
-            "description": "Scroll-stopping graphics, reels and copy produced in-house."
-          },
-          {
-            "title": "Community Management",
-            "description": "We engage, respond and grow loyal audiences around your brand."
-          },
-          {
-            "title": "Paid Social",
-            "description": "Targeted ad campaigns that turn reach into revenue."
-          }
-        ]
+        "category": "Digital Marketing",
+        "icon": "megaphone",
+        "menuSubtitle": "Promote your brand globally",
+        "hero": {
+          "title": "Social Media Marketing",
+          "image": "/images/social.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Social Media Marketing",
+          "text": "Your one-stop solution for comprehensive social media marketing. We turn attention into engagement through strategy, content creation, targeted advertising and data-driven insights — so your brand becomes impossible to ignore. Whether you are looking to grow your following, increase website traffic or enhance customer interaction, GrowthBox is here to turn your social media challenges into opportunities.",
+          "image": "/images/social.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Social Media Marketing",
+          "items": [
+            "We create scroll-stopping content that reflects your brand and sparks conversation.",
+            "We grow real, engaged audiences across every platform that matters to you.",
+            "You can track reach, engagement and conversions clearly at any time."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Social Media Marketing?",
+          "items": [
+            {
+              "title": "Always-On Strategy",
+              "text": "A custom roadmap that keeps your brand top of mind every single day."
+            },
+            {
+              "title": "Creative that Converts",
+              "text": "Visuals, copy and video engineered to drive action, not just likes."
+            },
+            {
+              "title": "Community Management",
+              "text": "We nurture conversations and build loyal communities around your brand."
+            },
+            {
+              "title": "Transparent Reporting",
+              "text": "Clear insights so you always know exactly what your investment returns."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Social Media Marketing?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering social media marketing that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        },
+        "dataInsights": {
+          "heading": "Data Insights on Social Media Marketing",
+          "cards": [
+            {
+              "title": "Global Spend & Growth",
+              "text": "Investment in social media marketing keeps climbing as brands see the returns it delivers year on year."
+            },
+            {
+              "title": "User Engagement",
+              "text": "Audiences spend more time than ever on the channels where great social media marketing lives."
+            },
+            {
+              "title": "Targeting Capabilities",
+              "text": "Modern tools let us reach exactly the right people at exactly the right moment."
+            },
+            {
+              "title": "Return on Investment",
+              "text": "Done right, social media marketing is one of the highest-ROI investments a business can make."
+            }
+          ]
+        },
+        "servicesList": {
+          "heading": "GrowthBox Social Media Marketing Services",
+          "cards": [
+            {
+              "title": "Strategy & Planning",
+              "text": "A clear, custom roadmap built around your audience and objectives."
+            },
+            {
+              "title": "Creative & Content",
+              "text": "On-brand assets designed to capture attention and drive action."
+            },
+            {
+              "title": "Campaign Management",
+              "text": "Hands-on execution and continuous optimisation across every channel."
+            },
+            {
+              "title": "Audience Targeting",
+              "text": "Precision targeting that puts you in front of the right people."
+            },
+            {
+              "title": "Analytics & Reporting",
+              "text": "Transparent dashboards so you always know what is working."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "A dedicated team invested in your long-term success."
+            }
+          ]
+        }
       },
       {
         "slug": "seo",
         "title": "Search Engine Optimization",
-        "heading": "SEO Services that Deliver Compounding Growth",
-        "intro": "Get found by the customers already searching for you. Our SEO services combine technical excellence, content and authority-building for durable rankings.",
-        "features": [
-          {
-            "title": "Technical SEO",
-            "description": "A fast, crawlable and error-free foundation for your site."
-          },
-          {
-            "title": "On-Page SEO",
-            "description": "Optimised content and structure that search engines love."
-          },
-          {
-            "title": "Local SEO",
-            "description": "Win the map pack and dominate searches in your area."
-          },
-          {
-            "title": "Link Building",
-            "description": "Authority-building outreach that lifts your entire domain."
-          }
-        ]
+        "category": "Digital Marketing",
+        "icon": "search",
+        "menuSubtitle": "Target more audience",
+        "hero": {
+          "title": "Search Engine Optimization",
+          "image": "/images/ads.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Search Engine Optimization",
+          "text": "Get found by the customers already searching for you. Our SEO services combine technical excellence, high-quality content and authority-building to earn durable, compounding rankings. Search is where intent lives — we help you show up at the exact moment your customers are ready to act.",
+          "image": "/images/ads.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Search Engine Optimization",
+          "items": [
+            "We build a fast, crawlable, error-free technical foundation for your site.",
+            "We target the keywords your customers actually search for.",
+            "You get steady, compounding organic traffic that lowers your cost per lead."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Search Engine Optimization?",
+          "items": [
+            {
+              "title": "Technical SEO",
+              "text": "A rock-solid, search-ready foundation baked into your site."
+            },
+            {
+              "title": "On-Page Excellence",
+              "text": "Optimised content and structure that search engines reward."
+            },
+            {
+              "title": "Local SEO",
+              "text": "Win the map pack and dominate searches in your area."
+            },
+            {
+              "title": "Authority Building",
+              "text": "White-hat link building that lifts your entire domain."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Search Engine Optimization?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering search engine optimization that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        },
+        "dataInsights": {
+          "heading": "Data Insights on Search Engine Optimization",
+          "cards": [
+            {
+              "title": "Global Spend & Growth",
+              "text": "Investment in search engine optimization keeps climbing as brands see the returns it delivers year on year."
+            },
+            {
+              "title": "User Engagement",
+              "text": "Audiences spend more time than ever on the channels where great search engine optimization lives."
+            },
+            {
+              "title": "Targeting Capabilities",
+              "text": "Modern tools let us reach exactly the right people at exactly the right moment."
+            },
+            {
+              "title": "Return on Investment",
+              "text": "Done right, search engine optimization is one of the highest-ROI investments a business can make."
+            }
+          ]
+        },
+        "servicesList": {
+          "heading": "GrowthBox Search Engine Optimization Services",
+          "cards": [
+            {
+              "title": "Strategy & Planning",
+              "text": "A clear, custom roadmap built around your audience and objectives."
+            },
+            {
+              "title": "Creative & Content",
+              "text": "On-brand assets designed to capture attention and drive action."
+            },
+            {
+              "title": "Campaign Management",
+              "text": "Hands-on execution and continuous optimisation across every channel."
+            },
+            {
+              "title": "Audience Targeting",
+              "text": "Precision targeting that puts you in front of the right people."
+            },
+            {
+              "title": "Analytics & Reporting",
+              "text": "Transparent dashboards so you always know what is working."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "A dedicated team invested in your long-term success."
+            }
+          ]
+        }
       },
       {
         "slug": "google-ads",
         "title": "Google Ads",
-        "heading": "Google Ads Management Built for ROI",
-        "intro": "Turn high-intent searches into customers with expertly managed PPC campaigns and transparent reporting.",
-        "features": [
-          {
-            "title": "Search Campaigns",
-            "description": "Capture demand from customers ready to buy."
-          },
-          {
-            "title": "Display & Shopping",
-            "description": "Expand reach and showcase products where it counts."
-          },
-          {
-            "title": "Conversion Optimisation",
-            "description": "Landing pages and funnels tuned to convert clicks."
-          },
-          {
-            "title": "Transparent Reporting",
-            "description": "Clear dashboards so you always know your ROI."
-          }
-        ]
+        "category": "Digital Marketing",
+        "icon": "target",
+        "menuSubtitle": "Engage more visitors into customers",
+        "hero": {
+          "title": "Google Ads Management",
+          "image": "/images/ads.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Google Ads",
+          "text": "Turn high-intent searches into paying customers with expertly managed pay-per-click campaigns. From Search to Display to Shopping, we build, manage and optimise campaigns engineered for maximum ROI and a lower cost per lead — with transparent reporting every step of the way.",
+          "image": "/images/ads.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Google Ads",
+          "items": [
+            "We capture demand from customers who are ready to buy right now.",
+            "We optimise every rupee of spend for the highest possible return.",
+            "You see clear, honest reporting on exactly where your budget goes."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Google Ads?",
+          "items": [
+            {
+              "title": "Search Campaigns",
+              "text": "Capture demand from customers actively looking for you."
+            },
+            {
+              "title": "Display & Shopping",
+              "text": "Expand reach and showcase products where it counts."
+            },
+            {
+              "title": "Precision Targeting",
+              "text": "Laser-focused keywords, audiences and placements."
+            },
+            {
+              "title": "Conversion Focus",
+              "text": "Landing pages and funnels tuned to turn clicks into customers."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Google Ads?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering google ads that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        },
+        "dataInsights": {
+          "heading": "Data Insights on Google Ads",
+          "cards": [
+            {
+              "title": "Global Spend & Growth",
+              "text": "Investment in google ads keeps climbing as brands see the returns it delivers year on year."
+            },
+            {
+              "title": "User Engagement",
+              "text": "Audiences spend more time than ever on the channels where great google ads lives."
+            },
+            {
+              "title": "Targeting Capabilities",
+              "text": "Modern tools let us reach exactly the right people at exactly the right moment."
+            },
+            {
+              "title": "Return on Investment",
+              "text": "Done right, google ads is one of the highest-ROI investments a business can make."
+            }
+          ]
+        },
+        "servicesList": {
+          "heading": "GrowthBox Google Ads Services",
+          "cards": [
+            {
+              "title": "Strategy & Planning",
+              "text": "A clear, custom roadmap built around your audience and objectives."
+            },
+            {
+              "title": "Creative & Content",
+              "text": "On-brand assets designed to capture attention and drive action."
+            },
+            {
+              "title": "Campaign Management",
+              "text": "Hands-on execution and continuous optimisation across every channel."
+            },
+            {
+              "title": "Audience Targeting",
+              "text": "Precision targeting that puts you in front of the right people."
+            },
+            {
+              "title": "Analytics & Reporting",
+              "text": "Transparent dashboards so you always know what is working."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "A dedicated team invested in your long-term success."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "youtube-marketing",
+        "title": "YouTube Marketing",
+        "category": "Digital Marketing",
+        "icon": "youtube",
+        "menuSubtitle": "Build trust through remarkable content",
+        "hero": {
+          "title": "YouTube Marketing",
+          "image": "/images/social.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox YouTube Marketing",
+          "text": "Video is how modern audiences discover and trust brands. Our YouTube marketing blends channel strategy, standout video content and precise advertising to capture attention, grow your subscribers and turn viewers into customers.",
+          "image": "/images/social.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality YouTube Marketing",
+          "items": [
+            "We craft a channel strategy built around discovery and watch time.",
+            "We produce video content that captures attention in the first three seconds.",
+            "You build lasting trust and a growing library of assets that keep working."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your YouTube Marketing?",
+          "items": [
+            {
+              "title": "Channel Strategy",
+              "text": "A roadmap designed for discovery, watch time and growth."
+            },
+            {
+              "title": "Video Production",
+              "text": "Scroll-stopping content that reflects your brand."
+            },
+            {
+              "title": "YouTube Ads",
+              "text": "Targeted campaigns that reach the right viewers."
+            },
+            {
+              "title": "Optimisation",
+              "text": "Titles, thumbnails and SEO tuned for maximum reach."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for YouTube Marketing?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering youtube marketing that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        },
+        "dataInsights": {
+          "heading": "Data Insights on YouTube Marketing",
+          "cards": [
+            {
+              "title": "Global Spend & Growth",
+              "text": "Investment in youtube marketing keeps climbing as brands see the returns it delivers year on year."
+            },
+            {
+              "title": "User Engagement",
+              "text": "Audiences spend more time than ever on the channels where great youtube marketing lives."
+            },
+            {
+              "title": "Targeting Capabilities",
+              "text": "Modern tools let us reach exactly the right people at exactly the right moment."
+            },
+            {
+              "title": "Return on Investment",
+              "text": "Done right, youtube marketing is one of the highest-ROI investments a business can make."
+            }
+          ]
+        },
+        "servicesList": {
+          "heading": "GrowthBox YouTube Marketing Services",
+          "cards": [
+            {
+              "title": "Strategy & Planning",
+              "text": "A clear, custom roadmap built around your audience and objectives."
+            },
+            {
+              "title": "Creative & Content",
+              "text": "On-brand assets designed to capture attention and drive action."
+            },
+            {
+              "title": "Campaign Management",
+              "text": "Hands-on execution and continuous optimisation across every channel."
+            },
+            {
+              "title": "Audience Targeting",
+              "text": "Precision targeting that puts you in front of the right people."
+            },
+            {
+              "title": "Analytics & Reporting",
+              "text": "Transparent dashboards so you always know what is working."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "A dedicated team invested in your long-term success."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "content-marketing",
+        "title": "Content Marketing",
+        "category": "Digital Marketing",
+        "icon": "pencil",
+        "menuSubtitle": "Build trust through remarkable content",
+        "hero": {
+          "title": "Content Marketing",
+          "image": "/images/social.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Content Marketing",
+          "text": "Great content builds trust, authority and demand. We plan, create and distribute content that answers your customers questions, ranks in search and moves people to act — turning your brand into the resource your audience relies on.",
+          "image": "/images/social.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Content Marketing",
+          "items": [
+            "We build a content strategy mapped to every stage of your funnel.",
+            "We create remarkable articles, guides and assets that earn attention.",
+            "You grow authority, organic traffic and qualified leads over time."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Content Marketing?",
+          "items": [
+            {
+              "title": "Content Strategy",
+              "text": "A plan mapped to your audience and business goals."
+            },
+            {
+              "title": "Creative Production",
+              "text": "Articles, guides, graphics and video made in-house."
+            },
+            {
+              "title": "SEO Integration",
+              "text": "Content built to rank and get discovered."
+            },
+            {
+              "title": "Distribution",
+              "text": "We get your content in front of the right people."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Content Marketing?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering content marketing that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        },
+        "dataInsights": {
+          "heading": "Data Insights on Content Marketing",
+          "cards": [
+            {
+              "title": "Global Spend & Growth",
+              "text": "Investment in content marketing keeps climbing as brands see the returns it delivers year on year."
+            },
+            {
+              "title": "User Engagement",
+              "text": "Audiences spend more time than ever on the channels where great content marketing lives."
+            },
+            {
+              "title": "Targeting Capabilities",
+              "text": "Modern tools let us reach exactly the right people at exactly the right moment."
+            },
+            {
+              "title": "Return on Investment",
+              "text": "Done right, content marketing is one of the highest-ROI investments a business can make."
+            }
+          ]
+        },
+        "servicesList": {
+          "heading": "GrowthBox Content Marketing Services",
+          "cards": [
+            {
+              "title": "Strategy & Planning",
+              "text": "A clear, custom roadmap built around your audience and objectives."
+            },
+            {
+              "title": "Creative & Content",
+              "text": "On-brand assets designed to capture attention and drive action."
+            },
+            {
+              "title": "Campaign Management",
+              "text": "Hands-on execution and continuous optimisation across every channel."
+            },
+            {
+              "title": "Audience Targeting",
+              "text": "Precision targeting that puts you in front of the right people."
+            },
+            {
+              "title": "Analytics & Reporting",
+              "text": "Transparent dashboards so you always know what is working."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "A dedicated team invested in your long-term success."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "ecommerce-portal",
+        "title": "Customize Ecommerce Portal",
+        "category": "E-Commerce",
+        "icon": "cart",
+        "menuSubtitle": "A complete solution to achieve ecommerce goals",
+        "hero": {
+          "title": "Customize E-Commerce Portal",
+          "image": "/images/ads.svg"
+        },
+        "intro": {
+          "heading": "Customize Ecommerce Portal",
+          "text": "When you want to grow your business for more sales, you need a user-friendly approach that meets your customers with every possible solution and gives you a unique traffic volume. We help you develop your business into a brand with deep expertise in customised ecommerce portals.",
+          "image": "/images/ads.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Ecommerce Solutions",
+          "items": [
+            "We offer a customised ecommerce platform that is attractively designed on an affordable budget.",
+            "Our professional developers give your website a user-friendly solution that helps you gain more traffic and customers.",
+            "You can track your sales easily at any time."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Customize Ecommerce Portal?",
+          "items": [
+            {
+              "title": "High-Quality Portals",
+              "text": "Powerful, reliable ecommerce solutions that perform online."
+            },
+            {
+              "title": "Flexible Platforms",
+              "text": "Solutions that allow subscribe, download and many more options."
+            },
+            {
+              "title": "Beautiful Custom Design",
+              "text": "Unique design with guest checkout, add-to-cart and more specifications."
+            },
+            {
+              "title": "Every Device",
+              "text": "A platform-friendly approach for desktop, laptop and mobile."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Customize Ecommerce Portal?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering customize ecommerce portal that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "grow-ecommerce-sales",
+        "title": "Grow eCommerce Sales",
+        "category": "E-Commerce",
+        "icon": "sales",
+        "menuSubtitle": "Get more ecommerce potential customers",
+        "hero": {
+          "title": "Grow eCommerce Sales",
+          "image": "/images/ads.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Grow eCommerce Sales",
+          "text": "More traffic is only half the story — the goal is more sales. We combine conversion-focused design, targeted advertising and retention marketing to grow your revenue per visitor and turn one-time buyers into loyal customers.",
+          "image": "/images/ads.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Grow eCommerce Sales",
+          "items": [
+            "We drive high-intent traffic that is ready to purchase.",
+            "We optimise your store to convert more of the visitors you already have.",
+            "You grow repeat purchases with smart retention and email flows."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Grow eCommerce Sales?",
+          "items": [
+            {
+              "title": "Conversion Optimisation",
+              "text": "Turn more of your visitors into paying customers."
+            },
+            {
+              "title": "Performance Ads",
+              "text": "Targeted campaigns that deliver profitable sales."
+            },
+            {
+              "title": "Retention Marketing",
+              "text": "Email and loyalty flows that grow lifetime value."
+            },
+            {
+              "title": "Analytics",
+              "text": "Clear reporting on revenue, ROAS and customer growth."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Grow eCommerce Sales?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering grow ecommerce sales that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "project-handling",
+        "title": "Project Handling",
+        "category": "E-Commerce",
+        "icon": "kanban",
+        "menuSubtitle": "Manage time & quality for best results",
+        "hero": {
+          "title": "Project Handling",
+          "image": "/images/hero.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Project Handling",
+          "text": "Great outcomes need great management. Our project handling keeps timelines, quality and communication under control from kickoff to launch, so your project ships on time, on budget and exactly to brief.",
+          "image": "/images/hero.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Project Handling",
+          "items": [
+            "We manage timelines and quality so nothing slips through the cracks.",
+            "We keep you informed with clear communication at every milestone.",
+            "You get dependable delivery, on time and on budget."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Project Handling?",
+          "items": [
+            {
+              "title": "Clear Milestones",
+              "text": "A structured plan with visible progress at every stage."
+            },
+            {
+              "title": "Quality Control",
+              "text": "Rigorous review so every deliverable meets the mark."
+            },
+            {
+              "title": "Transparent Updates",
+              "text": "Honest, regular reporting you can rely on."
+            },
+            {
+              "title": "Dedicated Team",
+              "text": "A single point of contact invested in your success."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Project Handling?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering project handling that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "pay-per-click",
+        "title": "Pay Per Click",
+        "category": "E-Commerce",
+        "icon": "cursor",
+        "menuSubtitle": "Build trust through remarkable content",
+        "hero": {
+          "title": "Pay Per Click",
+          "image": "/images/ads.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Pay Per Click",
+          "text": "PPC puts your brand in front of ready-to-buy customers instantly. We build and manage high-performing campaigns across search and social, obsessing over targeting, creative and landing pages to deliver the lowest cost per acquisition.",
+          "image": "/images/ads.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Pay Per Click",
+          "items": [
+            "We reach customers at the exact moment they are searching to buy.",
+            "We optimise bids, targeting and creative for the lowest cost per lead.",
+            "You get transparent reporting on every rupee of ad spend."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Pay Per Click?",
+          "items": [
+            {
+              "title": "Full-Funnel Campaigns",
+              "text": "Search, social and display working together."
+            },
+            {
+              "title": "Precision Targeting",
+              "text": "Reach exactly the right audience, every time."
+            },
+            {
+              "title": "Creative Testing",
+              "text": "Continuous A/B testing for better performance."
+            },
+            {
+              "title": "ROI Focus",
+              "text": "Every decision is made to grow your return."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Pay Per Click?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering pay per click that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "conversion-optimization",
+        "title": "Conversion Optimization",
+        "category": "E-Commerce",
+        "icon": "conversion",
+        "menuSubtitle": "Build trust through remarkable content",
+        "hero": {
+          "title": "Conversion Optimization",
+          "image": "/images/ads.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Conversion Optimization",
+          "text": "The cheapest growth comes from converting more of the traffic you already have. Through research, testing and design, we remove friction from your funnel and turn more visitors into customers — lifting revenue without lifting spend.",
+          "image": "/images/ads.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Conversion Optimization",
+          "items": [
+            "We audit your funnel to find exactly where visitors drop off.",
+            "We test and refine pages to remove friction and lift conversions.",
+            "You get more customers from the same traffic you already have."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Conversion Optimization?",
+          "items": [
+            {
+              "title": "Funnel Analysis",
+              "text": "Pinpoint the exact leaks costing you customers."
+            },
+            {
+              "title": "A/B Testing",
+              "text": "Data-backed experiments that prove what works."
+            },
+            {
+              "title": "UX Improvements",
+              "text": "Design changes that make buying effortless."
+            },
+            {
+              "title": "Continuous Gains",
+              "text": "Ongoing optimisation that compounds over time."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Conversion Optimization?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering conversion optimization that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "software-development",
+        "title": "Software Development",
+        "category": "More Services",
+        "icon": "software",
+        "menuSubtitle": "A complete solution to achieve your goals",
+        "hero": {
+          "title": "Software Development",
+          "image": "/images/hero.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Software Development",
+          "text": "Custom software built around your business, not the other way around. From web apps to internal tools, we design, build and maintain fast, secure and scalable solutions using modern technology that keeps you ahead of the competition.",
+          "image": "/images/hero.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Software Development",
+          "items": [
+            "We build custom software engineered around your exact requirements.",
+            "We use modern, secure and scalable technology stacks.",
+            "You get reliable software plus ongoing support and enhancement."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Software Development?",
+          "items": [
+            {
+              "title": "Tailored Solutions",
+              "text": "Custom-built software that fits your business perfectly."
+            },
+            {
+              "title": "Modern Stack",
+              "text": "Fast, secure and future-proof technology."
+            },
+            {
+              "title": "Scalable Architecture",
+              "text": "Built to grow with your business."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "Maintenance and enhancement to keep you ahead."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Software Development?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering software development that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "logo-design",
+        "title": "Logo Design Services",
+        "category": "More Services",
+        "icon": "logo",
+        "menuSubtitle": "A memorable identity for your brand",
+        "hero": {
+          "title": "Logo Design Services",
+          "image": "/images/social.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Logo Design Services",
+          "text": "Your logo is the face of your brand. We craft distinctive, versatile and memorable logos that capture your identity and make a lasting first impression across every touchpoint — from your website to your storefront.",
+          "image": "/images/social.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Logo Design Services",
+          "items": [
+            "We design distinctive logos that capture your brand personality.",
+            "We deliver versatile files that work across every medium and size.",
+            "You get a memorable identity that builds instant recognition."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Logo Design Services?",
+          "items": [
+            {
+              "title": "Unique Concepts",
+              "text": "Original designs crafted just for your brand."
+            },
+            {
+              "title": "Versatile Files",
+              "text": "Formats ready for web, print and everything between."
+            },
+            {
+              "title": "Brand Alignment",
+              "text": "A mark that reflects who you truly are."
+            },
+            {
+              "title": "Unlimited Revisions",
+              "text": "We refine until it is exactly right."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Logo Design Services?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering logo design services that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
       },
       {
         "slug": "web-development",
-        "title": "Web Design & Development",
-        "heading": "Websites Engineered to Perform",
-        "intro": "Beautiful, fast and conversion-focused websites that turn visitors into customers and grow with your business.",
-        "features": [
-          {
-            "title": "Custom Design",
-            "description": "Unique, on-brand designs crafted around your goals."
-          },
-          {
-            "title": "Responsive Build",
-            "description": "Flawless performance on every screen size."
-          },
-          {
-            "title": "SEO Ready",
-            "description": "Search-optimised foundations from day one."
-          },
-          {
-            "title": "Ongoing Support",
-            "description": "Maintenance and optimisation to keep you ahead."
-          }
-        ]
+        "title": "Web Development",
+        "category": "More Services",
+        "icon": "code",
+        "menuSubtitle": "Manage time & quality for best results",
+        "hero": {
+          "title": "Web Development",
+          "image": "/images/hero.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Web Development",
+          "text": "Beautiful, fast and conversion-focused websites that turn visitors into customers and grow with your business. We handle design, build and optimisation, delivering search-ready foundations and flawless performance on every device.",
+          "image": "/images/hero.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Web Development",
+          "items": [
+            "We craft unique, on-brand designs around your goals.",
+            "We build responsive sites that perform flawlessly on every screen.",
+            "You get a search-ready foundation with ongoing support."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Web Development?",
+          "items": [
+            {
+              "title": "Custom Design",
+              "text": "Unique, on-brand websites crafted around your goals."
+            },
+            {
+              "title": "Responsive Build",
+              "text": "Flawless performance on every screen size."
+            },
+            {
+              "title": "SEO Ready",
+              "text": "Search-optimised foundations from day one."
+            },
+            {
+              "title": "Ongoing Support",
+              "text": "Maintenance and optimisation to keep you ahead."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Web Development?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering web development that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "branding",
+        "title": "Branding",
+        "category": "More Services",
+        "icon": "branding",
+        "menuSubtitle": "Manage time & quality for best results",
+        "hero": {
+          "title": "Branding",
+          "image": "/images/social.svg"
+        },
+        "intro": {
+          "heading": "Welcome to GrowthBox Branding",
+          "text": "A strong brand is your most valuable asset. We build complete brand identities — strategy, voice, visuals and guidelines — that make you distinctive, consistent and impossible to ignore across every channel.",
+          "image": "/images/social.svg",
+          "ctaLabel": "Book a Call with Our Marketing Guru",
+          "ctaUrl": "/contact-us"
+        },
+        "checklist": {
+          "heading": "Succeed Your Business with High-Quality Branding",
+          "items": [
+            "We define a clear brand strategy, voice and positioning.",
+            "We design a cohesive visual identity that stands out.",
+            "You get brand guidelines that keep everything consistent."
+          ]
+        },
+        "whyChoose": {
+          "heading": "Why Choose Us for Your Branding?",
+          "items": [
+            {
+              "title": "Brand Strategy",
+              "text": "Positioning and voice that set you apart."
+            },
+            {
+              "title": "Visual Identity",
+              "text": "A cohesive look that stands out everywhere."
+            },
+            {
+              "title": "Brand Guidelines",
+              "text": "Rules that keep your brand consistent."
+            },
+            {
+              "title": "Full Rollout",
+              "text": "From logo to launch, we handle it all."
+            }
+          ]
+        },
+        "reasons": {
+          "heading": "Why Choose GrowthBox for Branding?",
+          "subheading": "A results-first team that treats your growth like our own.",
+          "cards": [
+            {
+              "icon": "star",
+              "title": "Expertise & Experience",
+              "text": "A seasoned team with 10+ years delivering branding that performs."
+            },
+            {
+              "icon": "bulb",
+              "title": "Customised Strategies",
+              "text": "Every plan is tailored to your brand, market and goals — never a template."
+            },
+            {
+              "icon": "chart",
+              "title": "Proven Track Record",
+              "text": "Campaigns and projects backed by measurable, real-world results."
+            },
+            {
+              "icon": "trend",
+              "title": "Data-Driven Approach",
+              "text": "We measure what matters and optimise relentlessly for better returns."
+            },
+            {
+              "icon": "layers",
+              "title": "Comprehensive Service",
+              "text": "End-to-end delivery so every piece works together seamlessly."
+            },
+            {
+              "icon": "rocket",
+              "title": "Scalable Solutions",
+              "text": "Built to grow with you, from first launch to market leader."
+            }
+          ]
+        },
+        "process": {
+          "heading": "How We Work Together",
+          "steps": [
+            {
+              "icon": "coffee",
+              "label": "Discuss"
+            },
+            {
+              "icon": "bulb",
+              "label": "Plan"
+            },
+            {
+              "icon": "code",
+              "label": "Design & Dev"
+            },
+            {
+              "icon": "check",
+              "label": "Testing"
+            },
+            {
+              "icon": "rocket",
+              "label": "Launch"
+            },
+            {
+              "icon": "megaphone",
+              "label": "Promote"
+            }
+          ]
+        }
       }
-    ]
-  }
+    ],
+    "blog": {
+      "title": "Blog",
+      "heading": "Insights, Tips & Growth Ideas",
+      "intro": "Marketing know-how, trends and playbooks from the GrowthBox team.",
+      "posts": [
+        {
+          "title": "7 Social Media Trends to Watch This Year",
+          "category": "Social Media",
+          "excerpt": "The platforms and formats winning attention right now — and how to use them.",
+          "date": "Aug 2026",
+          "image": "/images/social.svg"
+        },
+        {
+          "title": "A Beginner’s Guide to SEO That Actually Ranks",
+          "category": "SEO",
+          "excerpt": "The fundamentals of durable, compounding organic growth explained simply.",
+          "date": "Jul 2026",
+          "image": "/images/ads.svg"
+        },
+        {
+          "title": "How to Lower Your Cost Per Lead on Google Ads",
+          "category": "Google Ads",
+          "excerpt": "Practical levers to pull for cheaper, higher-quality leads from PPC.",
+          "date": "Jul 2026",
+          "image": "/images/ads.svg"
+        },
+        {
+          "title": "Building an Ecommerce Store That Converts",
+          "category": "E-Commerce",
+          "excerpt": "Design and UX principles that turn browsers into buyers.",
+          "date": "Jun 2026",
+          "image": "/images/hero.svg"
+        },
+        {
+          "title": "Content Marketing: Quality Over Quantity",
+          "category": "Content",
+          "excerpt": "Why a few remarkable pieces beat a flood of forgettable ones.",
+          "date": "Jun 2026",
+          "image": "/images/social.svg"
+        },
+        {
+          "title": "Branding Basics for Growing Businesses",
+          "category": "Branding",
+          "excerpt": "How a consistent identity builds trust and drives growth.",
+          "date": "May 2026",
+          "image": "/images/social.svg"
+        }
+      ]
+    },
+    "career": {
+      "title": "Career",
+      "heading": "Grow Your Career at GrowthBox",
+      "intro": "We are a team of creatives, strategists and builders who love what we do. If you are ambitious, curious and driven by results, we would love to meet you.",
+      "perks": [
+        {
+          "icon": "rocket",
+          "title": "Growth & Learning",
+          "text": "Real ownership, mentorship and room to level up fast."
+        },
+        {
+          "icon": "users",
+          "title": "Great Team",
+          "text": "Collaborative, supportive people who have your back."
+        },
+        {
+          "icon": "star",
+          "title": "Meaningful Work",
+          "text": "Projects that make a real difference for real businesses."
+        },
+        {
+          "icon": "handshake",
+          "title": "Work-Life Balance",
+          "text": "Flexibility and respect for your time outside work."
+        }
+      ],
+      "openings": [
+        {
+          "role": "Social Media Manager",
+          "type": "Full-time",
+          "location": "Chandigarh",
+          "desc": "Own client social strategy, content and community across platforms."
+        },
+        {
+          "role": "SEO Specialist",
+          "type": "Full-time",
+          "location": "Chandigarh",
+          "desc": "Drive organic growth through technical, on-page and off-page SEO."
+        },
+        {
+          "role": "Web Developer",
+          "type": "Full-time",
+          "location": "Remote / Chandigarh",
+          "desc": "Build fast, beautiful, conversion-focused websites and apps."
+        },
+        {
+          "role": "Graphic Designer",
+          "type": "Full-time",
+          "location": "Chandigarh",
+          "desc": "Create scroll-stopping visuals across brand and campaigns."
+        }
+      ],
+      "ctaLabel": "Send Your Resume"
+    }
+  },
+  "serviceCategoryOrder": [
+    "Digital Marketing",
+    "E-Commerce",
+    "More Services"
+  ]
 }

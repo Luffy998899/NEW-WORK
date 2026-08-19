@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><% pageTitle = content.pages.career.title; %><%- include('partials/head') %></head>
+<body>
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumb">Home / Career</div>
+    <h1><%= content.pages.career.heading %></h1>
+    <p><%= content.pages.career.intro %></p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="container">
+    <div class="section-head"><h2>Why Work With Us</h2></div>
+    <div class="grid-2">
+      <% content.pages.career.perks.forEach(function(p){ %>
+        <div class="why-card">
+          <div class="ic"><%- include('partials/icon', { name: p.icon }) %></div>
+          <h4><%= p.title %></h4>
+          <p><%= p.text %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="pad light-bg">
+  <div class="container">
+    <div class="section-head"><h2>Open Positions</h2><p>Find your next role at GrowthBox.</p></div>
+    <div class="job-list">
+      <% content.pages.career.openings.forEach(function(job){ %>
+        <div class="job-card">
+          <div class="job-info">
+            <h4><%= job.role %></h4>
+            <p><%= job.desc %></p>
+            <div class="job-tags"><span><%= job.type %></span><span><%= job.location %></span></div>
+          </div>
+          <a class="btn btn-primary" href="/contact-us">Apply Now</a>
+        </div>
+      <% }); %>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a class="btn btn-dark" href="/contact-us"><%= content.pages.career.ctaLabel %></a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

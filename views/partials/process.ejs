@@ -1,0 +1,30 @@
+<%
+var steps = (typeof process !== 'undefined' && process && process.steps) ? process.steps : [];
+var heading = (typeof process !== 'undefined' && process && process.heading) ? process.heading : 'How We Work Together';
+%>
+<section class="pad process-section">
+  <div class="container">
+    <div class="section-head"><h2><%= heading %></h2></div>
+    <div class="process-ring" style="--n: <%= steps.length %>">
+      <div class="process-center">
+        <span class="pc-name"><%= content.site.name.replace(/Box$/,'') %><span class="dot">Box</span></span>
+        <span class="pc-sub"><%= content.site.tagline %></span>
+      </div>
+      <% steps.forEach(function(step, i){ %>
+        <div class="process-node" style="--i: <%= i %>">
+          <span class="pn-ic"><%- include('icon', { name: step.icon }) %></span>
+          <span class="pn-label"><%= step.label %></span>
+        </div>
+      <% }); %>
+    </div>
+    <div class="process-row">
+      <% steps.forEach(function(step, i){ %>
+        <div class="pr-step">
+          <span class="pn-ic"><%- include('icon', { name: step.icon }) %></span>
+          <span class="pn-label"><%= step.label %></span>
+          <% if (i < steps.length - 1) { %><span class="pr-arrow">→</span><% } %>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>

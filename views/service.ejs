@@ -4,27 +4,57 @@
 <body>
 <%- include('partials/header') %>
 
-<section class="page-hero">
-  <div class="container">
-    <div class="crumb">Home / Services / <%= service.title %></div>
-    <h1><%= service.heading %></h1>
-    <p><%= service.intro %></p>
-    <div style="margin-top:22px"><a class="btn btn-primary" href="/contact-us"><%= content.ctaButtonLabel %></a></div>
+<!-- SERVICE HERO -->
+<section class="svc-hero">
+  <div class="container svc-hero-inner">
+    <div class="svc-hero-visual">
+      <span class="doodle d1"></span>
+      <img src="<%= service.hero.image %>" alt="<%= service.title %>">
+    </div>
+    <h1 class="svc-hero-title"><%= service.hero.title %></h1>
+    <span class="doodle d2"></span>
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="pad">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Best <%= service.title %> Agency</span>
+      <h2 class="split-h"><%= service.intro.heading %></h2>
+      <p class="split-p"><%= service.intro.text %></p>
+      <a class="btn btn-primary" href="<%= service.intro.ctaUrl %>">
+        <%- include('partials/icon', { name: 'phone' }) %> <%= service.intro.ctaLabel %>
+      </a>
+    </div>
+    <div class="media"><img src="<%= service.intro.image %>" alt="<%= service.title %>"></div>
+  </div>
+</section>
+
+<% if (service.dataInsights) { %>
+<!-- DATA INSIGHTS -->
+<section class="pad light-bg">
   <div class="container">
-    <div class="section-head"><h2>What We Offer</h2></div>
+    <div class="section-head"><h2><%= service.dataInsights.heading %></h2></div>
     <div class="grid-2">
-      <% service.features.forEach(function(f){ %>
+      <% service.dataInsights.cards.forEach(function(card){ %>
         <div class="service-card">
-          <div class="ic"><%- include('partials/icon', { name: 'check' }) %></div>
-          <h4><%= f.title %></h4>
-          <p><%= f.description %></p>
+          <h4><%= card.title %></h4>
+          <p><%= card.text %></p>
         </div>
       <% }); %>
     </div>
+  </div>
+</section>
+<% } %>
+
+<!-- TRUSTED BY -->
+<section class="trusted pad-sm container">
+  <h3><%= content.trustedBy.heading %></h3>
+  <div class="logo-strip">
+    <% content.trustedBy.logos.forEach(function(l){ %>
+      <% if (l.image) { %><img src="<%= l.image %>" alt="<%= l.name %>"><% } else { %><span class="logo-item"><%= l.name %></span><% } %>
+    <% }); %>
   </div>
 </section>
 
@@ -34,20 +64,81 @@
   </div>
 </div>
 
+<!-- CHECKLIST -->
 <section class="pad">
   <div class="container">
-    <div class="section-head"><h2>Explore Our Other Services</h2></div>
-    <div class="grid-3">
-      <% content.pages.services.forEach(function(s){ if(s.slug!==service.slug){ %>
-        <a class="service-card" href="/services/<%= s.slug %>" style="display:block">
-          <h4><%= s.title %></h4>
-          <p><%= s.intro.slice(0,90) %>…</p>
-        </a>
-      <% }}); %>
+    <h2 class="lead-h"><%= service.checklist.heading %></h2>
+    <div class="checklist">
+      <% service.checklist.items.forEach(function(item){ %>
+        <div class="check-row">
+          <span class="check-ic"><%- include('partials/icon', { name: 'check' }) %></span>
+          <span><%= item %></span>
+        </div>
+      <% }); %>
     </div>
   </div>
 </section>
 
+<% if (service.servicesList) { %>
+<!-- SERVICES LIST -->
+<section class="pad light-bg">
+  <div class="container">
+    <div class="section-head"><h2><%= service.servicesList.heading %></h2></div>
+    <div class="grid-3">
+      <% service.servicesList.cards.forEach(function(card){ %>
+        <div class="service-card">
+          <div class="ic"><%- include('partials/icon', { name: 'star' }) %></div>
+          <h4><%= card.title %></h4>
+          <p><%= card.text %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<!-- WHY CHOOSE (2-col checklist) -->
+<section class="pad">
+  <div class="container">
+    <h2 class="lead-h"><%= service.whyChoose.heading %></h2>
+    <div class="grid-2 why-list">
+      <% service.whyChoose.items.forEach(function(item){ %>
+        <div class="check-card">
+          <span class="check-ic"><%- include('partials/icon', { name: 'check' }) %></span>
+          <div>
+            <h4><%= item.title %></h4>
+            <p><%= item.text %></p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<% if (service.reasons) { %>
+<!-- REASONS -->
+<section class="pad light-bg">
+  <div class="container">
+    <div class="section-head">
+      <h2><%= service.reasons.heading %></h2>
+      <p><%= service.reasons.subheading %></p>
+    </div>
+    <div class="grid-3">
+      <% service.reasons.cards.forEach(function(card){ %>
+        <div class="why-card">
+          <div class="ic"><%- include('partials/icon', { name: card.icon }) %></div>
+          <h4><%= card.title %></h4>
+          <p><%= card.text %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<%- include('partials/process', { process: service.process }) %>
+
+<!-- FINAL CTA -->
 <section class="pad-sm">
   <div class="container">
     <div class="final-cta">
