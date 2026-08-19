@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session');
+const cookieSession = require('cookie-session');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const fs = require('fs');
@@ -89,11 +89,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true, limit: '5mb' }));
 app.use(express.json({ limit: '5mb' }));
-app.use(session({
-  secret: config.sessionSecret,
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 1000 * 60 * 60 * 8 } // 8 hours
+// Stateless signed-cookie session. Unlike an in-memory store, this survives
+// across serverless instances (fixes being "logged out" on Vercel) because the
+// session lives in the signed cookie itself, not in per-instance memory.
+app.use(cookieSession({
+  name: 'gb_sess',
+  keys: [config.sessionSecret],
+  maxAge: 1000 * 60 * 60 * 8, // 8 hours
+  httpOnly: true,
+  sameSite: 'lax'
 }));
 
 // Make content + helpers available to every view.
@@ -213,7 +217,8 @@ app.post('/admin/login', (req, res) => {
 });
 
 app.get('/admin/logout', (req, res) => {
-  req.session.destroy(() => res.redirect('/admin/login'));
+  req.session = null;
+  res.redirect('/admin/login');
 });
 
 // Sections shown on the dashboard (key -> friendly label + description).
