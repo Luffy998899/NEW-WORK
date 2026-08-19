@@ -1,20 +1,56 @@
+<%
+// Group services by category following the defined order
+var byCat = {};
+(content.pages.services || []).forEach(function(s){ (byCat[s.category] = byCat[s.category] || []).push(s); });
+var catOrder = content.serviceCategoryOrder || Object.keys(byCat);
+%>
 <header class="site-header">
   <div class="container">
     <a href="/" class="logo">
       <% if (content.site.logoImage) { %>
         <img src="<%= content.site.logoImage %>" alt="<%= content.site.name %>">
       <% } else { %>
-        <span><%= content.site.name.replace(/Box$/,'') %><span class="dot">Box</span></span>
+        <span class="logo-txt"><%= content.site.name.replace(/Box$/,'') %><span class="dot">Box</span></span>
+        <span class="logo-sub"><%= content.site.tagline %></span>
       <% } %>
     </a>
+
     <nav class="nav" id="mainNav">
       <% content.nav.forEach(function(item){ %>
-        <a class="nav-link <%= currentPath === item.url ? 'active' : '' %>" href="<%= item.url %>"><%= item.label %></a>
+        <% if (item.mega) { %>
+          <div class="nav-item has-mega">
+            <a class="nav-link mega-toggle" href="<%= item.url %>"><%= item.label %>
+              <svg class="caret" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="mega">
+              <div class="mega-inner">
+                <% catOrder.forEach(function(cat){ if(byCat[cat]){ %>
+                  <div class="mega-col">
+                    <h4 class="mega-title"><%= cat %></h4>
+                    <% byCat[cat].forEach(function(s){ %>
+                      <a class="mega-link" href="/services/<%= s.slug %>">
+                        <span class="mega-ic"><%- include('icon', { name: s.icon }) %></span>
+                        <span class="mega-text">
+                          <strong><%= s.title %></strong>
+                          <em><%= s.menuSubtitle %></em>
+                        </span>
+                      </a>
+                    <% }); %>
+                  </div>
+                <% }}); %>
+              </div>
+            </div>
+          </div>
+        <% } else { %>
+          <a class="nav-link <%= currentPath === item.url ? 'active' : '' %>" href="<%= item.url %>"><%= item.label %></a>
+        <% } %>
       <% }); %>
-      <a class="btn btn-primary" href="/contact-us" style="display:none" data-mobile-cta><%= content.ctaButtonLabel %></a>
     </nav>
+
     <div class="nav-cta">
-      <a class="btn btn-primary" href="/contact-us"><%= content.ctaButtonLabel %></a>
+      <a class="btn btn-dark phone-btn" href="tel:<%= content.site.phone.replace(/[^0-9+]/g,'') %>">
+        <%- include('icon', { name: 'phone' }) %><span><%= content.site.phone %></span>
+      </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>

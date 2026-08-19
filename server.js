@@ -107,6 +107,14 @@ app.get('/about-us', (req, res) => {
   res.render('about', { content: getContent() });
 });
 
+app.get('/blog', (req, res) => {
+  res.render('blog', { content: getContent() });
+});
+
+app.get('/career', (req, res) => {
+  res.render('career', { content: getContent() });
+});
+
 app.get('/services/:slug', (req, res) => {
   const content = getContent();
   const service = (content.pages.services || []).find(s => s.slug === req.params.slug);

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><% pageTitle = content.pages.blog.title; %><%- include('partials/head') %></head>
+<body>
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumb">Home / Blog</div>
+    <h1><%= content.pages.blog.heading %></h1>
+    <p><%= content.pages.blog.intro %></p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="container">
+    <div class="grid-3">
+      <% content.pages.blog.posts.forEach(function(post){ %>
+        <article class="blog-card">
+          <div class="blog-thumb"><img src="<%= post.image %>" alt="<%= post.title %>"></div>
+          <div class="blog-body">
+            <span class="blog-cat"><%= post.category %></span>
+            <h3><%= post.title %></h3>
+            <p><%= post.excerpt %></p>
+            <div class="blog-meta"><%= post.date %> · <a href="#">Read more →</a></div>
+          </div>
+        </article>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2><%= content.ctaBanner.heading %></h2>
+      <a class="btn btn-dark" href="/contact-us"><%= content.ctaButtonLabel %></a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+</body>
+</html>

@@ -51,6 +51,18 @@
     tag(row, 'up', (i % 3) * 70);
   });
 
+  // Inner-page elements
+  staggerChildren('.checklist', 'left', 100);
+  staggerChildren('.why-list', 'up', 90);
+  staggerChildren('.job-list', 'up', 80);
+  staggerChildren('.process-row', 'up', 70);
+  // NB: do NOT transform-reveal .process-node — they rely on their own
+  // positioning transform to sit around the ring. Fade the whole ring instead.
+  each('.process-ring', 'fade');
+  each('.svc-hero-title', 'up');
+  each('.svc-hero-visual', 'left');
+  each('.lead-h', 'up');
+
   // ---------- Reveal on scroll ----------
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (reduce || !('IntersectionObserver' in window)) {
