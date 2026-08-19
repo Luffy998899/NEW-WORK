@@ -122,6 +122,34 @@ and are not permanent. Text/content edits (the bulk of the admin panel) persist
 in the database. For permanent image uploads, host the images elsewhere and
 paste their URLs into the image fields, or deploy to a host with a disk (below).
 
+### Your own server + domain + HTTPS (one command)
+To host on your own VPS (Ubuntu/Debian) under your domain with a free
+auto-renewing TLS certificate, use the included `deploy.sh`:
+
+1. Point your domain's DNS **A record** (and `www`, if you want it) at the
+   server's public IP. Make sure ports **80** and **443** are open.
+2. Copy the project to the server (e.g. `git clone <repo>` or `scp`), then run:
+   ```bash
+   sudo bash deploy.sh
+   ```
+3. Answer the prompts (domain, email, admin password, optional `DATABASE_URL`).
+
+The script installs Node.js, nginx and certbot; runs the app as a systemd
+service (auto-restart, starts on boot); configures nginx as a reverse proxy for
+your domain; and obtains + installs a **Let's Encrypt certificate** with
+automatic renewal. When it finishes your site is live at `https://yourdomain`
+and the admin panel at `https://yourdomain/admin`.
+
+Manage it afterwards with:
+```bash
+systemctl status growthbox      # status
+journalctl -u growthbox -f       # live logs
+systemctl restart growthbox      # restart (e.g. after git pull)
+```
+Secrets live in `/etc/growthbox.env`. On a VPS the file backend is fully
+persistent (`data/`, `public/uploads/`); set `DATABASE_URL` there if you prefer
+Postgres.
+
 ### Render / Railway / VPS (persistent disk, no database needed)
 Any host that runs `node server.js` on a writable filesystem works with the
 flat-file backend:
