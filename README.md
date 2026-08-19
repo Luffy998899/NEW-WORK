@@ -81,6 +81,39 @@ public/
   images/              Brand SVG graphics
 ```
 
+## Deployment
+
+### Vercel (serverless)
+The repo is Vercel-ready: `vercel.json` routes all requests to the Express app
+via `api/index.js`. Just import the repo in Vercel and deploy — no build config
+needed.
+
+**Important — content persistence on Vercel:** Vercel's filesystem is
+**read-only** except `/tmp`, which is per-instance and wiped on every redeploy.
+The public site always renders the content committed in `data/content.json`.
+Admin edits are written to `/tmp`, so they work **within a running instance but
+are not permanent** — a redeploy or a new serverless instance resets them.
+
+To make admin edits permanent you have two options:
+1. **Edit locally** and commit `data/content.json` (the site reads it as the
+   source of truth), or
+2. **Deploy to a host with a persistent disk** — Render, Railway, Fly.io, or a
+   VPS — where `data/content.json` stays writable and edits persist across
+   restarts (see below).
+
+Optional Vercel environment variables: `ADMIN_USER`, `ADMIN_PASSWORD`,
+`SESSION_SECRET` (set these so the admin login isn't the public default).
+
+### Render / Railway / VPS (persistent — recommended for the admin panel)
+Any host that runs `node server.js` on a normal (writable) filesystem gives you
+a fully persistent admin panel:
+- Build command: `npm install`
+- Start command: `npm start`
+- Set `ADMIN_PASSWORD` and `SESSION_SECRET` env vars.
+
+Here `data/content.json`, `data/submissions.json` and `public/uploads/` are all
+writable, so every admin edit persists.
+
 ## Notes
 - The design and layout replicate the original site; body copy is original
   placeholder text you can rewrite from the admin panel.

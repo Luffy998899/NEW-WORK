@@ -8,11 +8,26 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Bundled (read-only on serverless) data shipped with the repo.
 const DATA_DIR = path.join(__dirname, 'data');
-const CONTENT_FILE = path.join(DATA_DIR, 'content.json');
-const CONFIG_FILE = path.join(DATA_DIR, 'config.json');
-const SUBMISSIONS_FILE = path.join(DATA_DIR, 'submissions.json');
-const UPLOAD_DIR = path.join(__dirname, 'public', 'uploads');
+const BUNDLED_CONTENT = path.join(DATA_DIR, 'content.json');
+
+// On serverless hosts (Vercel, AWS Lambda) the project filesystem is
+// read-only — only /tmp is writable, and it is per-instance & ephemeral.
+// Locally we just use ./data. WRITE_DIR is where edits/uploads/config go.
+const IS_SERVERLESS = !!(process.env.VERCEL || process.env.AWS_REGION || process.env.NOW_REGION);
+const WRITE_DIR = process.env.DATA_DIR || (IS_SERVERLESS ? path.join('/tmp', 'growthbox-data') : DATA_DIR);
+const UPLOAD_DIR = IS_SERVERLESS ? path.join('/tmp', 'growthbox-uploads') : path.join(__dirname, 'public', 'uploads');
+
+const W_CONTENT = path.join(WRITE_DIR, 'content.json');
+const W_CONFIG = path.join(WRITE_DIR, 'config.json');
+const W_SUBMISSIONS = path.join(WRITE_DIR, 'submissions.json');
+
+function ensureDir(dir) {
+  try { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }); } catch (e) { /* read-only */ }
+}
+ensureDir(WRITE_DIR);
+ensureDir(UPLOAD_DIR);
 
 // ---------- Data helpers ----------
 function readJSON(file, fallback) {
@@ -22,32 +37,49 @@ function readJSON(file, fallback) {
     return fallback;
   }
 }
+// Never throw on write — on a read-only FS we just log and carry on so the
+// site keeps serving (edits simply won't persist).
 function writeJSON(file, data) {
-  fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  try {
+    ensureDir(path.dirname(file));
+    fs.writeFileSync(file, JSON.stringify(data, null, 2));
+    return true;
+  } catch (e) {
+    console.warn('writeJSON failed (read-only filesystem?):', file, e.message);
+    return false;
+  }
 }
+// Read the writable copy if present, otherwise the bundled read-only copy.
 function getContent() {
-  return readJSON(CONTENT_FILE, {});
+  if (fs.existsSync(W_CONTENT)) return readJSON(W_CONTENT, {});
+  return readJSON(BUNDLED_CONTENT, {});
 }
 function saveContent(data) {
-  writeJSON(CONTENT_FILE, data);
+  return writeJSON(W_CONTENT, data);
+}
+function getSubmissions() {
+  return readJSON(W_SUBMISSIONS, []);
+}
+function saveSubmissions(data) {
+  return writeJSON(W_SUBMISSIONS, data);
 }
 
 // Initialise admin config with a default account if missing.
 function getConfig() {
-  let cfg = readJSON(CONFIG_FILE, null);
+  let cfg = readJSON(W_CONFIG, null);
   if (!cfg) {
     cfg = {
-      username: 'admin',
-      // default password: admin123 (change it from the admin panel)
-      passwordHash: bcrypt.hashSync('admin123', 10),
-      sessionSecret: 'growthbox-' + Math.random().toString(36).slice(2)
+      username: process.env.ADMIN_USER || 'admin',
+      // default password: admin123 (override with ADMIN_PASSWORD env var)
+      passwordHash: bcrypt.hashSync(process.env.ADMIN_PASSWORD || 'admin123', 10),
+      sessionSecret: process.env.SESSION_SECRET || 'growthbox-static-secret-change-me'
     };
-    writeJSON(CONFIG_FILE, cfg);
+    writeJSON(W_CONFIG, cfg);
   }
   return cfg;
 }
 function saveConfig(cfg) {
-  writeJSON(CONFIG_FILE, cfg);
+  return writeJSON(W_CONFIG, cfg);
 }
 const config = getConfig();
 
@@ -75,7 +107,9 @@ app.use((req, res, next) => {
 });
 
 // ---------- File uploads ----------
-if (!fs.existsSync(UPLOAD_DIR)) fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+// Serve uploaded images from the writable dir (on serverless this is /tmp,
+// which is not under /public, so it needs its own static mount).
+app.use('/uploads', express.static(UPLOAD_DIR));
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, UPLOAD_DIR),
   filename: (req, file, cb) => {
@@ -132,7 +166,7 @@ app.post('/contact-us', (req, res) => {
   if (!name || !email) {
     return res.render('contact', { content, sent: false, error: 'Please provide at least your name and email.' });
   }
-  const subs = readJSON(SUBMISSIONS_FILE, []);
+  const subs = getSubmissions();
   subs.unshift({
     id: Date.now(),
     name: String(name).slice(0, 200),
@@ -141,14 +175,14 @@ app.post('/contact-us', (req, res) => {
     message: String(message || '').slice(0, 5000),
     date: new Date().toISOString()
   });
-  writeJSON(SUBMISSIONS_FILE, subs);
+  saveSubmissions(subs);
   res.redirect('/contact-us?sent=1');
 });
 
 // Lightweight inline form used on homepage final CTA.
 app.post('/lead', (req, res) => {
   const { name, email, phone } = req.body;
-  const subs = readJSON(SUBMISSIONS_FILE, []);
+  const subs = getSubmissions();
   subs.unshift({
     id: Date.now(),
     name: String(name || '').slice(0, 200),
@@ -157,7 +191,7 @@ app.post('/lead', (req, res) => {
     message: '[Homepage lead form]',
     date: new Date().toISOString()
   });
-  writeJSON(SUBMISSIONS_FILE, subs);
+  saveSubmissions(subs);
   res.redirect('/?lead=1#final-cta');
 });
 
@@ -204,7 +238,7 @@ const SECTIONS = [
 ];
 
 app.get('/admin', requireAuth, (req, res) => {
-  const subs = readJSON(SUBMISSIONS_FILE, []);
+  const subs = getSubmissions();
   res.render('admin/dashboard', {
     content: getContent(),
     sections: SECTIONS,
@@ -251,14 +285,14 @@ app.post('/admin/upload', requireAuth, upload.single('image'), (req, res) => {
 
 // Contact submissions
 app.get('/admin/submissions', requireAuth, (req, res) => {
-  const subs = readJSON(SUBMISSIONS_FILE, []);
+  const subs = getSubmissions();
   res.render('admin/submissions', { content: getContent(), submissions: subs, active: 'submissions' });
 });
 
 app.post('/admin/submissions/delete/:id', requireAuth, (req, res) => {
-  let subs = readJSON(SUBMISSIONS_FILE, []);
+  let subs = getSubmissions();
   subs = subs.filter(s => String(s.id) !== String(req.params.id));
-  writeJSON(SUBMISSIONS_FILE, subs);
+  saveSubmissions(subs);
   res.redirect('/admin/submissions');
 });
 
@@ -290,7 +324,14 @@ app.use((req, res) => {
   res.status(404).render('404', { content: getContent() });
 });
 
-app.listen(PORT, () => {
-  console.log(`GrowthBox site running at http://localhost:${PORT}`);
-  console.log(`Admin panel at http://localhost:${PORT}/admin  (default login: admin / admin123)`);
-});
+// Start a listening server only when run directly (local / traditional
+// hosts). On serverless (Vercel), server.js is required as a module and the
+// exported Express app is used as the request handler instead.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`GrowthBox site running at http://localhost:${PORT}`);
+    console.log(`Admin panel at http://localhost:${PORT}/admin  (default login: admin / admin123)`);
+  });
+}
+
+module.exports = app;
